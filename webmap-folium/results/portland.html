@@ -1,0 +1,219 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_ce4b1312888d45b7a1fdd1140a687d8c {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_ce4b1312888d45b7a1fdd1140a687d8c" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_ce4b1312888d45b7a1fdd1140a687d8c = L.map('map_ce4b1312888d45b7a1fdd1140a687d8c', {
+                                           center:[22.2475,114.175724],
+                                           zoom: 17,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_acfa4bb455a74addb380c3d27073a0c8 = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_ce4b1312888d45b7a1fdd1140a687d8c);
+
+        
+        
+            
+
+            var marker_7cb8583d48ad489796ccb007882e7343 = L.marker(
+                [22.248626,114.174342],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_ce4b1312888d45b7a1fdd1140a687d8c);
+            
+        
+            
+            var popup_a6607b41ca664e538610a03db5f76893 = L.popup({maxWidth: '300'});
+
+            
+                var html_1866a70296fa4479ae111ee4b7914c70 = $('         <div id="html_1866a70296fa4479ae111ee4b7914c70"                 style="width: 100.0%; height: 100.0%;">                 The MTR station</div>                 ')[0];
+                popup_a6607b41ca664e538610a03db5f76893.setContent(html_1866a70296fa4479ae111ee4b7914c70);
+            
+
+            marker_7cb8583d48ad489796ccb007882e7343.bindPopup(popup_a6607b41ca664e538610a03db5f76893);
+
+            
+        
+        
+            
+
+            var circle_marker_87b41b9bd7f949ffa521533728adb1d4 = L.circle(
+                [22.24666,114.175785],
+                100,
+                {
+                    color: '#3186cc',
+                    fillColor: '#3186cc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_ce4b1312888d45b7a1fdd1140a687d8c);
+            
+        
+            
+            var popup_d0c547444f5b46ce9e7b35835fe53fa0 = L.popup({maxWidth: '300'});
+
+            
+                var html_db7d2e201f4e41fc83dfdddf82470e69 = $('         <div id="html_db7d2e201f4e41fc83dfdddf82470e69"                 style="width: 100.0%; height: 100.0%;">                 Ocean Park</div>                 ')[0];
+                popup_d0c547444f5b46ce9e7b35835fe53fa0.setContent(html_db7d2e201f4e41fc83dfdddf82470e69);
+            
+
+            circle_marker_87b41b9bd7f949ffa521533728adb1d4.bindPopup(popup_d0c547444f5b46ce9e7b35835fe53fa0);
+
+            
+        
+        
+        
+        </script>
+        
