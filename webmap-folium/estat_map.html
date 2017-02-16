@@ -1,0 +1,4421 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_5fbbd41b5ac04d01bbc531c196263570 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_5fbbd41b5ac04d01bbc531c196263570" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_5fbbd41b5ac04d01bbc531c196263570 = L.map('map_5fbbd41b5ac04d01bbc531c196263570', {
+                                           center:[22.366428,114.109497],
+                                           zoom: 11,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_edcd27e39c96427880460f9ed8d5ef96 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_5fbbd41b5ac04d01bbc531c196263570);
+
+        
+        
+            
+            var marker_cluster_62fbcf8b478c44bc8be7218026251054 = L.markerClusterGroup();
+            map_5fbbd41b5ac04d01bbc531c196263570.addLayer(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+            var marker_b9bd9825009e40b6a63b230ced5ba511 = L.marker(
+                [45.9872549,9.2613001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_08e53476f71c44e5bd3f3e9b0f8d1dad = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b9bd9825009e40b6a63b230ced5ba511.setIcon(icon_08e53476f71c44e5bd3f3e9b0f8d1dad);
+            
+        
+            
+            var popup_e3fa6dd824b246a182c1b608dd3cdce7 = L.popup({maxWidth: '300'});
+
+            
+                var html_889100d384a14e8ab40d985de5a1d024 = $('         <div id="html_889100d384a14e8ab40d985de5a1d024"                 style="width: 100.0%; height: 100.0%;">                 碧堤半島</div>                 ')[0];
+                popup_e3fa6dd824b246a182c1b608dd3cdce7.setContent(html_889100d384a14e8ab40d985de5a1d024);
+            
+
+            marker_b9bd9825009e40b6a63b230ced5ba511.bindPopup(popup_e3fa6dd824b246a182c1b608dd3cdce7);
+
+            
+        
+        
+            
+
+            var marker_9df458281eb54785951b3b3ffd477da5 = L.marker(
+                [22.35373935,114.105090467],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_09eda10affd146b19f81fd13370d0714 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9df458281eb54785951b3b3ffd477da5.setIcon(icon_09eda10affd146b19f81fd13370d0714);
+            
+        
+            
+            var popup_e1661797dbf44fde850ea9369cdc511a = L.popup({maxWidth: '300'});
+
+            
+                var html_10794410556a4e4abc251ae3445a5b6d = $('         <div id="html_10794410556a4e4abc251ae3445a5b6d"                 style="width: 100.0%; height: 100.0%;">                 青怡花園</div>                 ')[0];
+                popup_e1661797dbf44fde850ea9369cdc511a.setContent(html_10794410556a4e4abc251ae3445a5b6d);
+            
+
+            marker_9df458281eb54785951b3b3ffd477da5.bindPopup(popup_e1661797dbf44fde850ea9369cdc511a);
+
+            
+        
+        
+            
+
+            var marker_95d0091e6c5843368749cc665c2544d5 = L.marker(
+                [22.31946585,114.165520249],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_777ab00d3180461d9cdfeed3a738ac50 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_95d0091e6c5843368749cc665c2544d5.setIcon(icon_777ab00d3180461d9cdfeed3a738ac50);
+            
+        
+            
+            var popup_f810e33a4d374cfbaefb1ca45e368a1a = L.popup({maxWidth: '300'});
+
+            
+                var html_28e50d5bdade49188ab97276e909aa5d = $('         <div id="html_28e50d5bdade49188ab97276e909aa5d"                 style="width: 100.0%; height: 100.0%;">                 翠怡花園</div>                 ')[0];
+                popup_f810e33a4d374cfbaefb1ca45e368a1a.setContent(html_28e50d5bdade49188ab97276e909aa5d);
+            
+
+            marker_95d0091e6c5843368749cc665c2544d5.bindPopup(popup_f810e33a4d374cfbaefb1ca45e368a1a);
+
+            
+        
+        
+            
+
+            var marker_4c6119f759714dfebbe96ba51feb4866 = L.marker(
+                [27.6919746,-82.7234336],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_74489552e59a4278a8801341a8ec4ed6 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_4c6119f759714dfebbe96ba51feb4866.setIcon(icon_74489552e59a4278a8801341a8ec4ed6);
+            
+        
+            
+            var popup_00be57e10b2b4aef8926ac083ac03e35 = L.popup({maxWidth: '300'});
+
+            
+                var html_f5debd81a6dd4cbeb9ea39d0aa19a15b = $('         <div id="html_f5debd81a6dd4cbeb9ea39d0aa19a15b"                 style="width: 100.0%; height: 100.0%;">                 盈翠半島</div>                 ')[0];
+                popup_00be57e10b2b4aef8926ac083ac03e35.setContent(html_f5debd81a6dd4cbeb9ea39d0aa19a15b);
+            
+
+            marker_4c6119f759714dfebbe96ba51feb4866.bindPopup(popup_00be57e10b2b4aef8926ac083ac03e35);
+
+            
+        
+        
+            
+
+            var marker_1ff29fc221a84fa79ef01c8efa690e6a = L.marker(
+                [22.3733386,114.120137882],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_71e0bff5e7464558806bf018be33d25e = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1ff29fc221a84fa79ef01c8efa690e6a.setIcon(icon_71e0bff5e7464558806bf018be33d25e);
+            
+        
+            
+            var popup_37602e1ca3b84aeca412380a98c513a8 = L.popup({maxWidth: '300'});
+
+            
+                var html_02e4fb45be104ba0b90e60b153dfe429 = $('         <div id="html_02e4fb45be104ba0b90e60b153dfe429"                 style="width: 100.0%; height: 100.0%;">                 綠楊新村</div>                 ')[0];
+                popup_37602e1ca3b84aeca412380a98c513a8.setContent(html_02e4fb45be104ba0b90e60b153dfe429);
+            
+
+            marker_1ff29fc221a84fa79ef01c8efa690e6a.bindPopup(popup_37602e1ca3b84aeca412380a98c513a8);
+
+            
+        
+        
+            
+
+            var marker_67a707ff328547279a32b127659fd6c8 = L.marker(
+                [34.0277902,-118.1628486],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_540afdeba79a487d9677e9fc03873195 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_67a707ff328547279a32b127659fd6c8.setIcon(icon_540afdeba79a487d9677e9fc03873195);
+            
+        
+            
+            var popup_cf626262470d48efb418a00f45c78301 = L.popup({maxWidth: '300'});
+
+            
+                var html_e8bca94add634fd8b67167914dd96e5c = $('         <div id="html_e8bca94add634fd8b67167914dd96e5c"                 style="width: 100.0%; height: 100.0%;">                 麗城花園</div>                 ')[0];
+                popup_cf626262470d48efb418a00f45c78301.setContent(html_e8bca94add634fd8b67167914dd96e5c);
+            
+
+            marker_67a707ff328547279a32b127659fd6c8.bindPopup(popup_cf626262470d48efb418a00f45c78301);
+
+            
+        
+        
+            
+
+            var marker_b98bad9274e74f4581cb0d1be720c744 = L.marker(
+                [22.36217195,114.113702837],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_04a4a4a03b4d4451952d03d10253ce65 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b98bad9274e74f4581cb0d1be720c744.setIcon(icon_04a4a4a03b4d4451952d03d10253ce65);
+            
+        
+            
+            var popup_c97793fe7e2246cf9e9dbe082484b724 = L.popup({maxWidth: '300'});
+
+            
+                var html_34b936aa4bd843a3ab0147eee26e7530 = $('         <div id="html_34b936aa4bd843a3ab0147eee26e7530"                 style="width: 100.0%; height: 100.0%;">                 海濱花園</div>                 ')[0];
+                popup_c97793fe7e2246cf9e9dbe082484b724.setContent(html_34b936aa4bd843a3ab0147eee26e7530);
+            
+
+            marker_b98bad9274e74f4581cb0d1be720c744.bindPopup(popup_c97793fe7e2246cf9e9dbe082484b724);
+
+            
+        
+        
+            
+
+            var marker_dd386cd2e7b14905b692271d99b09d7c = L.marker(
+                [22.2888821,114.035569429],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_37b0c09c9a68489f9bd3221b866f14b1 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_dd386cd2e7b14905b692271d99b09d7c.setIcon(icon_37b0c09c9a68489f9bd3221b866f14b1);
+            
+        
+            
+            var popup_686367c60de2435aaff8c21323df412e = L.popup({maxWidth: '300'});
+
+            
+                var html_57b0f614d47c47789059bea45329a19f = $('         <div id="html_57b0f614d47c47789059bea45329a19f"                 style="width: 100.0%; height: 100.0%;">                 浪翠園</div>                 ')[0];
+                popup_686367c60de2435aaff8c21323df412e.setContent(html_57b0f614d47c47789059bea45329a19f);
+            
+
+            marker_dd386cd2e7b14905b692271d99b09d7c.bindPopup(popup_686367c60de2435aaff8c21323df412e);
+
+            
+        
+        
+            
+
+            var marker_6aa07df23fd6421e810146ac53071f01 = L.marker(
+                [22.48719605,114.144199766],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_443a6c13c45f4e0d92e0d09cfd3e60f5 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6aa07df23fd6421e810146ac53071f01.setIcon(icon_443a6c13c45f4e0d92e0d09cfd3e60f5);
+            
+        
+            
+            var popup_4235ba715f074bd9b7d14490cde3645d = L.popup({maxWidth: '300'});
+
+            
+                var html_58b2d611bbaa484f912d1f72ed7d211b = $('         <div id="html_58b2d611bbaa484f912d1f72ed7d211b"                 style="width: 100.0%; height: 100.0%;">                 牽晴間</div>                 ')[0];
+                popup_4235ba715f074bd9b7d14490cde3645d.setContent(html_58b2d611bbaa484f912d1f72ed7d211b);
+            
+
+            marker_6aa07df23fd6421e810146ac53071f01.bindPopup(popup_4235ba715f074bd9b7d14490cde3645d);
+
+            
+        
+        
+            
+
+            var marker_aab585bd5e5145d5ac7c54438690bbd2 = L.marker(
+                [22.441364,114.03713778],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_581a35b782ae4e059b2a0a7957b4bcef = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_aab585bd5e5145d5ac7c54438690bbd2.setIcon(icon_581a35b782ae4e059b2a0a7957b4bcef);
+            
+        
+            
+            var popup_4a21112bc49144cab60c76fea55f3ebd = L.popup({maxWidth: '300'});
+
+            
+                var html_7b8c7f1d4b4c4106893622f76b5c68bc = $('         <div id="html_7b8c7f1d4b4c4106893622f76b5c68bc"                 style="width: 100.0%; height: 100.0%;">                 YOHO TOWN</div>                 ')[0];
+                popup_4a21112bc49144cab60c76fea55f3ebd.setContent(html_7b8c7f1d4b4c4106893622f76b5c68bc);
+            
+
+            marker_aab585bd5e5145d5ac7c54438690bbd2.bindPopup(popup_4a21112bc49144cab60c76fea55f3ebd);
+
+            
+        
+        
+            
+
+            var marker_c0e78943b55046cab8ba7d3ccb00fd00 = L.marker(
+                [22.45056915,114.032793796],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_5b8b087ecdcd43278218a826c6dc0e62 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c0e78943b55046cab8ba7d3ccb00fd00.setIcon(icon_5b8b087ecdcd43278218a826c6dc0e62);
+            
+        
+            
+            var popup_b0d556d0f3114bb482f9601f52f2b1ce = L.popup({maxWidth: '300'});
+
+            
+                var html_e091095d022141a3864841c19b4335eb = $('         <div id="html_e091095d022141a3864841c19b4335eb"                 style="width: 100.0%; height: 100.0%;">                 采葉庭</div>                 ')[0];
+                popup_b0d556d0f3114bb482f9601f52f2b1ce.setContent(html_e091095d022141a3864841c19b4335eb);
+            
+
+            marker_c0e78943b55046cab8ba7d3ccb00fd00.bindPopup(popup_b0d556d0f3114bb482f9601f52f2b1ce);
+
+            
+        
+        
+            
+
+            var marker_f3548676efef49b1928107a37553e334 = L.marker(
+                [22.43663925,114.030914394],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_e7e53242ea5c42b19ee8adf80682e966 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f3548676efef49b1928107a37553e334.setIcon(icon_e7e53242ea5c42b19ee8adf80682e966);
+            
+        
+            
+            var popup_368648d6f2864d6eb67bd6a2e784cc4b = L.popup({maxWidth: '300'});
+
+            
+                var html_11b8b1c5df294a00832cdfd3449157fd = $('         <div id="html_11b8b1c5df294a00832cdfd3449157fd"                 style="width: 100.0%; height: 100.0%;">                 蝶翠峰</div>                 ')[0];
+                popup_368648d6f2864d6eb67bd6a2e784cc4b.setContent(html_11b8b1c5df294a00832cdfd3449157fd);
+            
+
+            marker_f3548676efef49b1928107a37553e334.bindPopup(popup_368648d6f2864d6eb67bd6a2e784cc4b);
+
+            
+        
+        
+            
+
+            var marker_510f4035d1f9474a9fc2c00425f29df9 = L.marker(
+                [22.38120395,113.964873397],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_5c8c4e4b485f4507814e79c6e86cfc98 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_510f4035d1f9474a9fc2c00425f29df9.setIcon(icon_5c8c4e4b485f4507814e79c6e86cfc98);
+            
+        
+            
+            var popup_3d010359269a4ffe9873912f9a89914c = L.popup({maxWidth: '300'});
+
+            
+                var html_f556695e15a349bbb33fa3a9394346cb = $('         <div id="html_f556695e15a349bbb33fa3a9394346cb"                 style="width: 100.0%; height: 100.0%;">                 新屯門中心</div>                 ')[0];
+                popup_3d010359269a4ffe9873912f9a89914c.setContent(html_f556695e15a349bbb33fa3a9394346cb);
+            
+
+            marker_510f4035d1f9474a9fc2c00425f29df9.bindPopup(popup_3d010359269a4ffe9873912f9a89914c);
+
+            
+        
+        
+            
+
+            var marker_ed73ddb836b447f890d553fa6e25461a = L.marker(
+                [22.45938785,114.00109573],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_5ceb00012b3943f088e802fdab9672da = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ed73ddb836b447f890d553fa6e25461a.setIcon(icon_5ceb00012b3943f088e802fdab9672da);
+            
+        
+            
+            var popup_832295f0f3cf4b2a9b9075710f56f59d = L.popup({maxWidth: '300'});
+
+            
+                var html_59b9bc9e7c634f35a161ff539a5c49ff = $('         <div id="html_59b9bc9e7c634f35a161ff539a5c49ff"                 style="width: 100.0%; height: 100.0%;">                 柏慧豪園</div>                 ')[0];
+                popup_832295f0f3cf4b2a9b9075710f56f59d.setContent(html_59b9bc9e7c634f35a161ff539a5c49ff);
+            
+
+            marker_ed73ddb836b447f890d553fa6e25461a.bindPopup(popup_832295f0f3cf4b2a9b9075710f56f59d);
+
+            
+        
+        
+            
+
+            var marker_ab0f1f40049148d5a31f728af0b8f409 = L.marker(
+                [22.49026145,114.141741891],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_e1edf2fc715c4d4981ae02eb36f5439b = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ab0f1f40049148d5a31f728af0b8f409.setIcon(icon_e1edf2fc715c4d4981ae02eb36f5439b);
+            
+        
+            
+            var popup_06032263ad654311a09c72f0fa277a6e = L.popup({maxWidth: '300'});
+
+            
+                var html_d371c90b125640a8996bc754085e17a4 = $('         <div id="html_d371c90b125640a8996bc754085e17a4"                 style="width: 100.0%; height: 100.0%;">                 粉嶺中心</div>                 ')[0];
+                popup_06032263ad654311a09c72f0fa277a6e.setContent(html_d371c90b125640a8996bc754085e17a4);
+            
+
+            marker_ab0f1f40049148d5a31f728af0b8f409.bindPopup(popup_06032263ad654311a09c72f0fa277a6e);
+
+            
+        
+        
+            
+
+            var marker_a32ab2777f174253814807a53003e065 = L.marker(
+                [38.5451122,-75.0890708],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_636dd6e9a8044284976f31f93951baf1 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a32ab2777f174253814807a53003e065.setIcon(icon_636dd6e9a8044284976f31f93951baf1);
+            
+        
+            
+            var popup_bca3e3db639a424c900b6f0278d21f6e = L.popup({maxWidth: '300'});
+
+            
+                var html_cc2ae6b058864706ac0815e56d68cb30 = $('         <div id="html_cc2ae6b058864706ac0815e56d68cb30"                 style="width: 100.0%; height: 100.0%;">                 海典灣</div>                 ')[0];
+                popup_bca3e3db639a424c900b6f0278d21f6e.setContent(html_cc2ae6b058864706ac0815e56d68cb30);
+            
+
+            marker_a32ab2777f174253814807a53003e065.bindPopup(popup_bca3e3db639a424c900b6f0278d21f6e);
+
+            
+        
+        
+            
+
+            var marker_a13db61f4a63498ab0d8181b0b395c50 = L.marker(
+                [36.1241843,-115.168270861],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_7d957083a05b494a82da059fe2cb38d3 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a13db61f4a63498ab0d8181b0b395c50.setIcon(icon_7d957083a05b494a82da059fe2cb38d3);
+            
+        
+            
+            var popup_dd09dd9e9a0f499b86efb5fdb77f3f6b = L.popup({maxWidth: '300'});
+
+            
+                var html_60ac1216f6e04e4ab8ea65c29589ca3e = $('         <div id="html_60ac1216f6e04e4ab8ea65c29589ca3e"                 style="width: 100.0%; height: 100.0%;">                 御龍山</div>                 ')[0];
+                popup_dd09dd9e9a0f499b86efb5fdb77f3f6b.setContent(html_60ac1216f6e04e4ab8ea65c29589ca3e);
+            
+
+            marker_a13db61f4a63498ab0d8181b0b395c50.bindPopup(popup_dd09dd9e9a0f499b86efb5fdb77f3f6b);
+
+            
+        
+        
+            
+
+            var marker_873f339264e649fca91251aa5cc57a63 = L.marker(
+                [39.1865648,-120.8327161],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_07948316c1d44212859ccaea18491fed = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_873f339264e649fca91251aa5cc57a63.setIcon(icon_07948316c1d44212859ccaea18491fed);
+            
+        
+            
+            var popup_17b3fc423b3c47788a921674ccab5902 = L.popup({maxWidth: '300'});
+
+            
+                var html_7dfb2accaad74096a4d09b6f70330afc = $('         <div id="html_7dfb2accaad74096a4d09b6f70330afc"                 style="width: 100.0%; height: 100.0%;">                 翠擁華庭</div>                 ')[0];
+                popup_17b3fc423b3c47788a921674ccab5902.setContent(html_7dfb2accaad74096a4d09b6f70330afc);
+            
+
+            marker_873f339264e649fca91251aa5cc57a63.bindPopup(popup_17b3fc423b3c47788a921674ccab5902);
+
+            
+        
+        
+            
+
+            var marker_42eb19146c1c483a854872f4f207f15e = L.marker(
+                [22.42540605,114.231416253],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_29dce2292be740a18a9b0497282d52d0 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_42eb19146c1c483a854872f4f207f15e.setIcon(icon_29dce2292be740a18a9b0497282d52d0);
+            
+        
+            
+            var popup_7195c94897e647efbf922f9d85bc2041 = L.popup({maxWidth: '300'});
+
+            
+                var html_6473926fcf6841e1b346d387a1696802 = $('         <div id="html_6473926fcf6841e1b346d387a1696802"                 style="width: 100.0%; height: 100.0%;">                 海柏花園</div>                 ')[0];
+                popup_7195c94897e647efbf922f9d85bc2041.setContent(html_6473926fcf6841e1b346d387a1696802);
+            
+
+            marker_42eb19146c1c483a854872f4f207f15e.bindPopup(popup_7195c94897e647efbf922f9d85bc2041);
+
+            
+        
+        
+            
+
+            var marker_900a6947254d4057aa613d582b980c91 = L.marker(
+                [22.3139546,114.266294126],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_52fae673b5a043ea9fe7b4ad97eb990f = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_900a6947254d4057aa613d582b980c91.setIcon(icon_52fae673b5a043ea9fe7b4ad97eb990f);
+            
+        
+            
+            var popup_2b9406bd34d2484fbd10d75649f5cc5e = L.popup({maxWidth: '300'});
+
+            
+                var html_6cbbcf7a9e6d45b7b895ac0896f2dc7c = $('         <div id="html_6cbbcf7a9e6d45b7b895ac0896f2dc7c"                 style="width: 100.0%; height: 100.0%;">                 新寶城</div>                 ')[0];
+                popup_2b9406bd34d2484fbd10d75649f5cc5e.setContent(html_6cbbcf7a9e6d45b7b895ac0896f2dc7c);
+            
+
+            marker_900a6947254d4057aa613d582b980c91.bindPopup(popup_2b9406bd34d2484fbd10d75649f5cc5e);
+
+            
+        
+        
+            
+
+            var marker_c6c8e2222a424744a71d254d4656da08 = L.marker(
+                [22.31633365,114.265515618],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_8a59c49353864a51a4c4b563acb10b7b = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c6c8e2222a424744a71d254d4656da08.setIcon(icon_8a59c49353864a51a4c4b563acb10b7b);
+            
+        
+            
+            var popup_60bb08d88a00487f81086b90649e5c60 = L.popup({maxWidth: '300'});
+
+            
+                var html_ada2e6e466e241ff86143332541549a9 = $('         <div id="html_ada2e6e466e241ff86143332541549a9"                 style="width: 100.0%; height: 100.0%;">                 東港城</div>                 ')[0];
+                popup_60bb08d88a00487f81086b90649e5c60.setContent(html_ada2e6e466e241ff86143332541549a9);
+            
+
+            marker_c6c8e2222a424744a71d254d4656da08.bindPopup(popup_60bb08d88a00487f81086b90649e5c60);
+
+            
+        
+        
+            
+
+            var marker_51792afed12d4debac48f9890a575d7f = L.marker(
+                [22.3758981,114.111893699],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_16099e03587f404d8e7a0cf881e3918c = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_51792afed12d4debac48f9890a575d7f.setIcon(icon_16099e03587f404d8e7a0cf881e3918c);
+            
+        
+            
+            var popup_c1b42029082b4f0fae1bc2b2c3d9659d = L.popup({maxWidth: '300'});
+
+            
+                var html_425f079c46274f8ead6c8a248c30dbf9 = $('         <div id="html_425f079c46274f8ead6c8a248c30dbf9"                 style="width: 100.0%; height: 100.0%;">                 愉景新城</div>                 ')[0];
+                popup_c1b42029082b4f0fae1bc2b2c3d9659d.setContent(html_425f079c46274f8ead6c8a248c30dbf9);
+            
+
+            marker_51792afed12d4debac48f9890a575d7f.bindPopup(popup_c1b42029082b4f0fae1bc2b2c3d9659d);
+
+            
+        
+        
+            
+
+            var marker_b8ae992268714a3fb4fd9a793f8ae4be = L.marker(
+                [22.36651825,114.059448492],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_1eef6544242e428cb013cae9f7a712d2 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b8ae992268714a3fb4fd9a793f8ae4be.setIcon(icon_1eef6544242e428cb013cae9f7a712d2);
+            
+        
+            
+            var popup_649145b709e14b3db07b580fb09dc320 = L.popup({maxWidth: '300'});
+
+            
+                var html_0efb346b17554a63af2772aac159a20a = $('         <div id="html_0efb346b17554a63af2772aac159a20a"                 style="width: 100.0%; height: 100.0%;">                 麗都花園</div>                 ')[0];
+                popup_649145b709e14b3db07b580fb09dc320.setContent(html_0efb346b17554a63af2772aac159a20a);
+            
+
+            marker_b8ae992268714a3fb4fd9a793f8ae4be.bindPopup(popup_649145b709e14b3db07b580fb09dc320);
+
+            
+        
+        
+            
+
+            var marker_4789a1009bf2430c972a1953a2063ede = L.marker(
+                [22.35362165,114.13562745],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_5ef0693bc74140f1a3d2a47fdf1e5ecb = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_4789a1009bf2430c972a1953a2063ede.setIcon(icon_5ef0693bc74140f1a3d2a47fdf1e5ecb);
+            
+        
+            
+            var popup_58b38b9f32634884a8e2c837686e75c0 = L.popup({maxWidth: '300'});
+
+            
+                var html_80db33e87d26427096e7ebc5399d3bca = $('         <div id="html_80db33e87d26427096e7ebc5399d3bca"                 style="width: 100.0%; height: 100.0%;">                 華景山莊</div>                 ')[0];
+                popup_58b38b9f32634884a8e2c837686e75c0.setContent(html_80db33e87d26427096e7ebc5399d3bca);
+            
+
+            marker_4789a1009bf2430c972a1953a2063ede.bindPopup(popup_58b38b9f32634884a8e2c837686e75c0);
+
+            
+        
+        
+            
+
+            var marker_5cb1be2a4e3e4587b033c173b77c9892 = L.marker(
+                [22.34200955,114.175770645],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_91388b351dc94951a6ae46e7edcf1638 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5cb1be2a4e3e4587b033c173b77c9892.setIcon(icon_91388b351dc94951a6ae46e7edcf1638);
+            
+        
+            
+            var popup_0f6c6931d77f47a18ae1993a00635041 = L.popup({maxWidth: '300'});
+
+            
+                var html_72c4daa5dd4e46068fefe957ab77a6cb = $('         <div id="html_72c4daa5dd4e46068fefe957ab77a6cb"                 style="width: 100.0%; height: 100.0%;">                 畢架山一號</div>                 ')[0];
+                popup_0f6c6931d77f47a18ae1993a00635041.setContent(html_72c4daa5dd4e46068fefe957ab77a6cb);
+            
+
+            marker_5cb1be2a4e3e4587b033c173b77c9892.bindPopup(popup_0f6c6931d77f47a18ae1993a00635041);
+
+            
+        
+        
+            
+
+            var marker_7114e061cb78435bb936a3ca0b46192b = L.marker(
+                [22.31031555,114.177004871],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_90b099b4fbb1493c976d3588891589cf = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7114e061cb78435bb936a3ca0b46192b.setIcon(icon_90b099b4fbb1493c976d3588891589cf);
+            
+        
+            
+            var popup_2a541ef9ed014d4bb4861cfe563bc04a = L.popup({maxWidth: '300'});
+
+            
+                var html_d3858fb1138942d6aa8ab3e917effea4 = $('         <div id="html_d3858fb1138942d6aa8ab3e917effea4"                 style="width: 100.0%; height: 100.0%;">                 君頤峰</div>                 ')[0];
+                popup_2a541ef9ed014d4bb4861cfe563bc04a.setContent(html_d3858fb1138942d6aa8ab3e917effea4);
+            
+
+            marker_7114e061cb78435bb936a3ca0b46192b.bindPopup(popup_2a541ef9ed014d4bb4861cfe563bc04a);
+
+            
+        
+        
+            
+
+            var marker_a3badbb15af145548e34f6ea9198af24 = L.marker(
+                [22.32450885,114.16044398],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_3a2bb649d9314f3f9ac4cca18d0dfe53 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a3badbb15af145548e34f6ea9198af24.setIcon(icon_3a2bb649d9314f3f9ac4cca18d0dfe53);
+            
+        
+            
+            var popup_59bbccda790343bfa48095923f2ac4c1 = L.popup({maxWidth: '300'});
+
+            
+                var html_b5926bb8ba884d4d8e901cb6bedfb4d9 = $('         <div id="html_b5926bb8ba884d4d8e901cb6bedfb4d9"                 style="width: 100.0%; height: 100.0%;">                 港灣豪庭</div>                 ')[0];
+                popup_59bbccda790343bfa48095923f2ac4c1.setContent(html_b5926bb8ba884d4d8e901cb6bedfb4d9);
+            
+
+            marker_a3badbb15af145548e34f6ea9198af24.bindPopup(popup_59bbccda790343bfa48095923f2ac4c1);
+
+            
+        
+        
+            
+
+            var marker_93fb3f9984d346af819dd9f516991b99 = L.marker(
+                [40.7506369,-73.9786678],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_2a3236a11d9c492abbacc54a3caa4123 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_93fb3f9984d346af819dd9f516991b99.setIcon(icon_2a3236a11d9c492abbacc54a3caa4123);
+            
+        
+            
+            var popup_3ff7d6cccf21433da07d4a59494b36b3 = L.popup({maxWidth: '300'});
+
+            
+                var html_645a02b6607c41a58f1b547b73186b65 = $('         <div id="html_645a02b6607c41a58f1b547b73186b65"                 style="width: 100.0%; height: 100.0%;">                 柏景灣</div>                 ')[0];
+                popup_3ff7d6cccf21433da07d4a59494b36b3.setContent(html_645a02b6607c41a58f1b547b73186b65);
+            
+
+            marker_93fb3f9984d346af819dd9f516991b99.bindPopup(popup_3ff7d6cccf21433da07d4a59494b36b3);
+
+            
+        
+        
+            
+
+            var marker_930d1ec788ab4da0af55a1d3fa62e3f4 = L.marker(
+                [22.31926855,114.15732885],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_2b90e2ab7f104f0fabff5300774797ac = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_930d1ec788ab4da0af55a1d3fa62e3f4.setIcon(icon_2b90e2ab7f104f0fabff5300774797ac);
+            
+        
+            
+            var popup_998877c52b4c4cd5b3ea63e0cdc227de = L.popup({maxWidth: '300'});
+
+            
+                var html_08372d8dfd684607805311790bf6970b = $('         <div id="html_08372d8dfd684607805311790bf6970b"                 style="width: 100.0%; height: 100.0%;">                 維港灣</div>                 ')[0];
+                popup_998877c52b4c4cd5b3ea63e0cdc227de.setContent(html_08372d8dfd684607805311790bf6970b);
+            
+
+            marker_930d1ec788ab4da0af55a1d3fa62e3f4.bindPopup(popup_998877c52b4c4cd5b3ea63e0cdc227de);
+
+            
+        
+        
+            
+
+            var marker_47b3e2abbc3549a4a5b4b2400d2e8e5c = L.marker(
+                [22.32165285,114.159196869],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_af0ed7e914ec4fe085fffd34079610fc = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_47b3e2abbc3549a4a5b4b2400d2e8e5c.setIcon(icon_af0ed7e914ec4fe085fffd34079610fc);
+            
+        
+            
+            var popup_e44d6545d2b945d89f31a6386886e195 = L.popup({maxWidth: '300'});
+
+            
+                var html_4498930655d2403cad353a473fb26829 = $('         <div id="html_4498930655d2403cad353a473fb26829"                 style="width: 100.0%; height: 100.0%;">                 君匯港</div>                 ')[0];
+                popup_e44d6545d2b945d89f31a6386886e195.setContent(html_4498930655d2403cad353a473fb26829);
+            
+
+            marker_47b3e2abbc3549a4a5b4b2400d2e8e5c.bindPopup(popup_e44d6545d2b945d89f31a6386886e195);
+
+            
+        
+        
+            
+
+            var marker_f7db2113e6a54c28b053e16fcb330d57 = L.marker(
+                [22.3344926,114.147618801],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_c238c3a5392043ffb81f11dac2700d17 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f7db2113e6a54c28b053e16fcb330d57.setIcon(icon_c238c3a5392043ffb81f11dac2700d17);
+            
+        
+            
+            var popup_9fdf0da50b2b454fa802c433e455e92a = L.popup({maxWidth: '300'});
+
+            
+                var html_845da47f9c504b16b2926315385ffc7b = $('         <div id="html_845da47f9c504b16b2926315385ffc7b"                 style="width: 100.0%; height: 100.0%;">                 泓景臺</div>                 ')[0];
+                popup_9fdf0da50b2b454fa802c433e455e92a.setContent(html_845da47f9c504b16b2926315385ffc7b);
+            
+
+            marker_f7db2113e6a54c28b053e16fcb330d57.bindPopup(popup_9fdf0da50b2b454fa802c433e455e92a);
+
+            
+        
+        
+            
+
+            var marker_7aacbcffe236453cb023eb8a1de51557 = L.marker(
+                [22.33498965,114.14246623],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_381a09e818084cff96692f538ac9a5f9 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7aacbcffe236453cb023eb8a1de51557.setIcon(icon_381a09e818084cff96692f538ac9a5f9);
+            
+        
+            
+            var popup_f33b40b25bb24c9bba8c1f52dd9f9504 = L.popup({maxWidth: '300'});
+
+            
+                var html_61419969e3f045a383899bea66c5b073 = $('         <div id="html_61419969e3f045a383899bea66c5b073"                 style="width: 100.0%; height: 100.0%;">                 曼克頓山</div>                 ')[0];
+                popup_f33b40b25bb24c9bba8c1f52dd9f9504.setContent(html_61419969e3f045a383899bea66c5b073);
+            
+
+            marker_7aacbcffe236453cb023eb8a1de51557.bindPopup(popup_f33b40b25bb24c9bba8c1f52dd9f9504);
+
+            
+        
+        
+            
+
+            var marker_13ef405ee07d4314bdafa0a01b3c5a85 = L.marker(
+                [-5.0247799,17.84732],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_f2d71dc4c1e3458baaf2295ded5e961d = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_13ef405ee07d4314bdafa0a01b3c5a85.setIcon(icon_f2d71dc4c1e3458baaf2295ded5e961d);
+            
+        
+            
+            var popup_679afea35d704246bbff3c41533a2fcf = L.popup({maxWidth: '300'});
+
+            
+                var html_a28e4f0f1fc34ca7b74742856138a6fc = $('         <div id="html_a28e4f0f1fc34ca7b74742856138a6fc"                 style="width: 100.0%; height: 100.0%;">                 昇悅居</div>                 ')[0];
+                popup_679afea35d704246bbff3c41533a2fcf.setContent(html_a28e4f0f1fc34ca7b74742856138a6fc);
+            
+
+            marker_13ef405ee07d4314bdafa0a01b3c5a85.bindPopup(popup_679afea35d704246bbff3c41533a2fcf);
+
+            
+        
+        
+            
+
+            var marker_5e2659ef5eb14a30a009ad4512312606 = L.marker(
+                [22.306114,114.187945977],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_5dc877344b0c42e6a26b83c71d4224bd = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5e2659ef5eb14a30a009ad4512312606.setIcon(icon_5dc877344b0c42e6a26b83c71d4224bd);
+            
+        
+            
+            var popup_e36cc70d7e024291bd6f83bba4a573f7 = L.popup({maxWidth: '300'});
+
+            
+                var html_a2cdbff3403543cd9034336fc7b8786e = $('         <div id="html_a2cdbff3403543cd9034336fc7b8786e"                 style="width: 100.0%; height: 100.0%;">                 黃埔新村</div>                 ')[0];
+                popup_e36cc70d7e024291bd6f83bba4a573f7.setContent(html_a2cdbff3403543cd9034336fc7b8786e);
+            
+
+            marker_5e2659ef5eb14a30a009ad4512312606.bindPopup(popup_e36cc70d7e024291bd6f83bba4a573f7);
+
+            
+        
+        
+            
+
+            var marker_998233f1dd48425d84d5bbfbebe1abd7 = L.marker(
+                [24.4961734,54.4085200436],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_bab499b6ceb64a4eb3aed1c97fc244d0 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_998233f1dd48425d84d5bbfbebe1abd7.setIcon(icon_bab499b6ceb64a4eb3aed1c97fc244d0);
+            
+        
+            
+            var popup_736aefb7829742ff8acf9e1736868530 = L.popup({maxWidth: '300'});
+
+            
+                var html_1bd715bf63a84b5da87d30bb6c65a4c1 = $('         <div id="html_1bd715bf63a84b5da87d30bb6c65a4c1"                 style="width: 100.0%; height: 100.0%;">                 傲雲峰</div>                 ')[0];
+                popup_736aefb7829742ff8acf9e1736868530.setContent(html_1bd715bf63a84b5da87d30bb6c65a4c1);
+            
+
+            marker_998233f1dd48425d84d5bbfbebe1abd7.bindPopup(popup_736aefb7829742ff8acf9e1736868530);
+
+            
+        
+        
+            
+
+            var marker_7956c32b9220427d80b24a984377a14b = L.marker(
+                [5.5597752,-74.3904286],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_a6e2fc39db144233ac30d06f33dbf673 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7956c32b9220427d80b24a984377a14b.setIcon(icon_a6e2fc39db144233ac30d06f33dbf673);
+            
+        
+            
+            var popup_50547ebff1f14146ac896fcf0358d21d = L.popup({maxWidth: '300'});
+
+            
+                var html_e31b7438260c410b8d7c994c0ebf7e15 = $('         <div id="html_e31b7438260c410b8d7c994c0ebf7e15"                 style="width: 100.0%; height: 100.0%;">                 海逸豪園</div>                 ')[0];
+                popup_50547ebff1f14146ac896fcf0358d21d.setContent(html_e31b7438260c410b8d7c994c0ebf7e15);
+            
+
+            marker_7956c32b9220427d80b24a984377a14b.bindPopup(popup_50547ebff1f14146ac896fcf0358d21d);
+
+            
+        
+        
+            
+
+            var marker_bb10f99e12ba4f7b89d98c378522d427 = L.marker(
+                [22.31924455,114.19357586],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_d1b47a51984547cd954aa2e5e211034f = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_bb10f99e12ba4f7b89d98c378522d427.setIcon(icon_d1b47a51984547cd954aa2e5e211034f);
+            
+        
+            
+            var popup_39a3800de7c94aadb368b82c79a37f18 = L.popup({maxWidth: '300'});
+
+            
+                var html_b1a6916f70f5422a91d44bac8564dc6a = $('         <div id="html_b1a6916f70f5422a91d44bac8564dc6a"                 style="width: 100.0%; height: 100.0%;">                 翔龍灣</div>                 ')[0];
+                popup_39a3800de7c94aadb368b82c79a37f18.setContent(html_b1a6916f70f5422a91d44bac8564dc6a);
+            
+
+            marker_bb10f99e12ba4f7b89d98c378522d427.bindPopup(popup_39a3800de7c94aadb368b82c79a37f18);
+
+            
+        
+        
+            
+
+            var marker_dfe75f995a6249efbc8be5d3c870023e = L.marker(
+                [40.624906,14.374836],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_09974ab569b946e4af7c30e6d9dfdcac = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_dfe75f995a6249efbc8be5d3c870023e.setIcon(icon_09974ab569b946e4af7c30e6d9dfdcac);
+            
+        
+            
+            var popup_0a31547a5ed14819a7848043b9073bdc = L.popup({maxWidth: '300'});
+
+            
+                var html_74ea4166f1bf43979e93ed79565c05a6 = $('         <div id="html_74ea4166f1bf43979e93ed79565c05a6"                 style="width: 100.0%; height: 100.0%;">                 擎天半島</div>                 ')[0];
+                popup_0a31547a5ed14819a7848043b9073bdc.setContent(html_74ea4166f1bf43979e93ed79565c05a6);
+            
+
+            marker_dfe75f995a6249efbc8be5d3c870023e.bindPopup(popup_0a31547a5ed14819a7848043b9073bdc);
+
+            
+        
+        
+            
+
+            var marker_7fec252f1cd04e6eba5c9a3a5c03e0cb = L.marker(
+                [22.3022794,114.168542737],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_3932dd23068d4ac2a40787cf6582ba11 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7fec252f1cd04e6eba5c9a3a5c03e0cb.setIcon(icon_3932dd23068d4ac2a40787cf6582ba11);
+            
+        
+            
+            var popup_5c463d9f7fd840998ef01cbd5c76a6f5 = L.popup({maxWidth: '300'});
+
+            
+                var html_a171bcaab9724482bf09aefa19fc2dc2 = $('         <div id="html_a171bcaab9724482bf09aefa19fc2dc2"                 style="width: 100.0%; height: 100.0%;">                 港景峰</div>                 ')[0];
+                popup_5c463d9f7fd840998ef01cbd5c76a6f5.setContent(html_a171bcaab9724482bf09aefa19fc2dc2);
+            
+
+            marker_7fec252f1cd04e6eba5c9a3a5c03e0cb.bindPopup(popup_5c463d9f7fd840998ef01cbd5c76a6f5);
+
+            
+        
+        
+            
+
+            var marker_97dee42c3641441d903be62ba6462d7d = L.marker(
+                [22.30369785,114.163089683],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_63aef13bee394bdda6354024b93f9cbd = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_97dee42c3641441d903be62ba6462d7d.setIcon(icon_63aef13bee394bdda6354024b93f9cbd);
+            
+        
+            
+            var popup_9e61031bca8e42e28848eeeec3e982c2 = L.popup({maxWidth: '300'});
+
+            
+                var html_86947c9ac5b340808dea2318cb6ee0ef = $('         <div id="html_86947c9ac5b340808dea2318cb6ee0ef"                 style="width: 100.0%; height: 100.0%;">                 凱旋門</div>                 ')[0];
+                popup_9e61031bca8e42e28848eeeec3e982c2.setContent(html_86947c9ac5b340808dea2318cb6ee0ef);
+            
+
+            marker_97dee42c3641441d903be62ba6462d7d.bindPopup(popup_9e61031bca8e42e28848eeeec3e982c2);
+
+            
+        
+        
+            
+
+            var marker_7c3316bc9c6444f7a3592a0703a0e5a5 = L.marker(
+                [22.30519035,114.163098652],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_3e31dd761e9c4acbaab843107bbe6040 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7c3316bc9c6444f7a3592a0703a0e5a5.setIcon(icon_3e31dd761e9c4acbaab843107bbe6040);
+            
+        
+            
+            var popup_692e7d6d6bbc47b2b09540ba51feae4c = L.popup({maxWidth: '300'});
+
+            
+                var html_59da6482a94041e8928df176b12a6ecb = $('         <div id="html_59da6482a94041e8928df176b12a6ecb"                 style="width: 100.0%; height: 100.0%;">                 漾日居</div>                 ')[0];
+                popup_692e7d6d6bbc47b2b09540ba51feae4c.setContent(html_59da6482a94041e8928df176b12a6ecb);
+            
+
+            marker_7c3316bc9c6444f7a3592a0703a0e5a5.bindPopup(popup_692e7d6d6bbc47b2b09540ba51feae4c);
+
+            
+        
+        
+            
+
+            var marker_f761a77685414f359ccf3c9ab1b8d81c = L.marker(
+                [22.30601985,114.227955504],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_2b79600c73ab4d0eb571a0afc884653f = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f761a77685414f359ccf3c9ab1b8d81c.setIcon(icon_2b79600c73ab4d0eb571a0afc884653f);
+            
+        
+            
+            var popup_9dafe821c90842739d12a5ce04393440 = L.popup({maxWidth: '300'});
+
+            
+                var html_e4e0295dcb6f47c597cf2a7c6cfe410a = $('         <div id="html_e4e0295dcb6f47c597cf2a7c6cfe410a"                 style="width: 100.0%; height: 100.0%;">                 麗港城</div>                 ')[0];
+                popup_9dafe821c90842739d12a5ce04393440.setContent(html_e4e0295dcb6f47c597cf2a7c6cfe410a);
+            
+
+            marker_f761a77685414f359ccf3c9ab1b8d81c.bindPopup(popup_9dafe821c90842739d12a5ce04393440);
+
+            
+        
+        
+            
+
+            var marker_c2f03b7fccd246d7b94905d6233a900c = L.marker(
+                [22.3068428,114.233600542],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_5e1aa238df1d4d42b30c0094163dc185 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c2f03b7fccd246d7b94905d6233a900c.setIcon(icon_5e1aa238df1d4d42b30c0094163dc185);
+            
+        
+            
+            var popup_9733c4684817449cb5be9ec3da500d10 = L.popup({maxWidth: '300'});
+
+            
+                var html_c8e517adeb67496e9e0472de637fa24c = $('         <div id="html_c8e517adeb67496e9e0472de637fa24c"                 style="width: 100.0%; height: 100.0%;">                 匯景花園</div>                 ')[0];
+                popup_9733c4684817449cb5be9ec3da500d10.setContent(html_c8e517adeb67496e9e0472de637fa24c);
+            
+
+            marker_c2f03b7fccd246d7b94905d6233a900c.bindPopup(popup_9733c4684817449cb5be9ec3da500d10);
+
+            
+        
+        
+            
+
+            var marker_effbab4e8a7540c98a1cc26bbcc7ef84 = L.marker(
+                [22.3244938,114.216555524],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_83d88764b648461e83efcb31d3f54197 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_effbab4e8a7540c98a1cc26bbcc7ef84.setIcon(icon_83d88764b648461e83efcb31d3f54197);
+            
+        
+            
+            var popup_e785db803bd44b008e0917746f522856 = L.popup({maxWidth: '300'});
+
+            
+                var html_90e83b3f7c79448fa999da99cc8c0f33 = $('         <div id="html_90e83b3f7c79448fa999da99cc8c0f33"                 style="width: 100.0%; height: 100.0%;">                 淘大花園</div>                 ')[0];
+                popup_e785db803bd44b008e0917746f522856.setContent(html_90e83b3f7c79448fa999da99cc8c0f33);
+            
+
+            marker_effbab4e8a7540c98a1cc26bbcc7ef84.bindPopup(popup_e785db803bd44b008e0917746f522856);
+
+            
+        
+        
+            
+
+            var marker_19fbc2aa34a241558181324200a2d70c = L.marker(
+                [22.33339155,114.196773365],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_c9700c8da5d746f9946798e1f72f6fdc = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_19fbc2aa34a241558181324200a2d70c.setIcon(icon_c9700c8da5d746f9946798e1f72f6fdc);
+            
+        
+            
+            var popup_bc36c976757947228b48b12ba1a42225 = L.popup({maxWidth: '300'});
+
+            
+                var html_e9dead343de84a67b4295ce04591feb0 = $('         <div id="html_e9dead343de84a67b4295ce04591feb0"                 style="width: 100.0%; height: 100.0%;">                 譽‧港灣</div>                 ')[0];
+                popup_bc36c976757947228b48b12ba1a42225.setContent(html_e9dead343de84a67b4295ce04591feb0);
+            
+
+            marker_19fbc2aa34a241558181324200a2d70c.bindPopup(popup_bc36c976757947228b48b12ba1a42225);
+
+            
+        
+        
+            
+
+            var marker_63b4101cc43e4cd2b0447afd11abe3da = L.marker(
+                [36.5047472,-4.7092923],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_9ecbe8b8a6b94fe69dcebc9544ac81f0 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_63b4101cc43e4cd2b0447afd11abe3da.setIcon(icon_9ecbe8b8a6b94fe69dcebc9544ac81f0);
+            
+        
+            
+            var popup_9de964a88d0742fea76a3b6f6bc22f08 = L.popup({maxWidth: '300'});
+
+            
+                var html_7fec229e7c2d491183175b778e739652 = $('         <div id="html_7fec229e7c2d491183175b778e739652"                 style="width: 100.0%; height: 100.0%;">                 御皇庭</div>                 ')[0];
+                popup_9de964a88d0742fea76a3b6f6bc22f08.setContent(html_7fec229e7c2d491183175b778e739652);
+            
+
+            marker_63b4101cc43e4cd2b0447afd11abe3da.bindPopup(popup_9de964a88d0742fea76a3b6f6bc22f08);
+
+            
+        
+        
+            
+
+            var marker_3165a44a1b77446b9d1624c4591839b0 = L.marker(
+                [22.5036402,114.13581849],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_f76d9e11afc846c18749a5e5db39fc50 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3165a44a1b77446b9d1624c4591839b0.setIcon(icon_f76d9e11afc846c18749a5e5db39fc50);
+            
+        
+            
+            var popup_01775dc976e54a6b9845ad212c74c462 = L.popup({maxWidth: '300'});
+
+            
+                var html_834ccd9f331d4430ba9ca94b6ea16e69 = $('         <div id="html_834ccd9f331d4430ba9ca94b6ea16e69"                 style="width: 100.0%; height: 100.0%;">                 皇府山</div>                 ')[0];
+                popup_01775dc976e54a6b9845ad212c74c462.setContent(html_834ccd9f331d4430ba9ca94b6ea16e69);
+            
+
+            marker_3165a44a1b77446b9d1624c4591839b0.bindPopup(popup_01775dc976e54a6b9845ad212c74c462);
+
+            
+        
+        
+            
+
+            var marker_f44916f82f9c41c681da2995511c78ed = L.marker(
+                [-33.770835,150.6616622],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_99ec9e93390c4566b673b32aafad6578 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f44916f82f9c41c681da2995511c78ed.setIcon(icon_99ec9e93390c4566b673b32aafad6578);
+            
+        
+            
+            var popup_ac8d9cb9ad4f4d58b6a1656b6e00b376 = L.popup({maxWidth: '300'});
+
+            
+                var html_f1798d1529e4472187d52c53aad4f9b2 = $('         <div id="html_f1798d1529e4472187d52c53aad4f9b2"                 style="width: 100.0%; height: 100.0%;">                 帝庭軒</div>                 ')[0];
+                popup_ac8d9cb9ad4f4d58b6a1656b6e00b376.setContent(html_f1798d1529e4472187d52c53aad4f9b2);
+            
+
+            marker_f44916f82f9c41c681da2995511c78ed.bindPopup(popup_ac8d9cb9ad4f4d58b6a1656b6e00b376);
+
+            
+        
+        
+            
+
+            var marker_68e59e99af10486fa657809e4614c75c = L.marker(
+                [22.44200715,114.161416979],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_bb5b316c95ef4ca0ab838bf20aaab00b = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_68e59e99af10486fa657809e4614c75c.setIcon(icon_bb5b316c95ef4ca0ab838bf20aaab00b);
+            
+        
+            
+            var popup_06c5e0e062fa4cc2afd5f0aacb67dd68 = L.popup({maxWidth: '300'});
+
+            
+                var html_259fd30505a14e6891e051065b6e1453 = $('         <div id="html_259fd30505a14e6891e051065b6e1453"                 style="width: 100.0%; height: 100.0%;">                 新峰花園</div>                 ')[0];
+                popup_06c5e0e062fa4cc2afd5f0aacb67dd68.setContent(html_259fd30505a14e6891e051065b6e1453);
+            
+
+            marker_68e59e99af10486fa657809e4614c75c.bindPopup(popup_06c5e0e062fa4cc2afd5f0aacb67dd68);
+
+            
+        
+        
+            
+
+            var marker_7834f2a8299d4c718854f566bb7647f5 = L.marker(
+                [14.519275,121.0699067],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_2757adc72726450b95705bf368189680 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7834f2a8299d4c718854f566bb7647f5.setIcon(icon_2757adc72726450b95705bf368189680);
+            
+        
+            
+            var popup_d65864f7c5244409bc08490db6c683ba = L.popup({maxWidth: '300'});
+
+            
+                var html_5b61fa1f22ae41c993db363a171adc91 = $('         <div id="html_5b61fa1f22ae41c993db363a171adc91"                 style="width: 100.0%; height: 100.0%;">                 太湖花園</div>                 ')[0];
+                popup_d65864f7c5244409bc08490db6c683ba.setContent(html_5b61fa1f22ae41c993db363a171adc91);
+            
+
+            marker_7834f2a8299d4c718854f566bb7647f5.bindPopup(popup_d65864f7c5244409bc08490db6c683ba);
+
+            
+        
+        
+            
+
+            var marker_3bc2fc050b084d13b7851b07dba2c898 = L.marker(
+                [46.0280867,9.0541987],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_fe34eaf0ba644843ac226c63f8aa9fde = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3bc2fc050b084d13b7851b07dba2c898.setIcon(icon_fe34eaf0ba644843ac226c63f8aa9fde);
+            
+        
+            
+            var popup_5729ff593f5d4c4884a0e2d39cfe7a77 = L.popup({maxWidth: '300'});
+
+            
+                var html_88bca23900404ec395df015d65b08c10 = $('         <div id="html_88bca23900404ec395df015d65b08c10"                 style="width: 100.0%; height: 100.0%;">                 帝堡城</div>                 ')[0];
+                popup_5729ff593f5d4c4884a0e2d39cfe7a77.setContent(html_88bca23900404ec395df015d65b08c10);
+            
+
+            marker_3bc2fc050b084d13b7851b07dba2c898.bindPopup(popup_5729ff593f5d4c4884a0e2d39cfe7a77);
+
+            
+        
+        
+            
+
+            var marker_479b638f4bad40dba0bdce0db8907272 = L.marker(
+                [22.42000255,114.224490933],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_4e12788c44c14a9587c89013bf12bae6 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_479b638f4bad40dba0bdce0db8907272.setIcon(icon_4e12788c44c14a9587c89013bf12bae6);
+            
+        
+            
+            var popup_ab7b3835ca65477b962fa4beec1bc013 = L.popup({maxWidth: '300'});
+
+            
+                var html_733875fc260f4eafb9430825e4f0085c = $('         <div id="html_733875fc260f4eafb9430825e4f0085c"                 style="width: 100.0%; height: 100.0%;">                 聽濤雅苑</div>                 ')[0];
+                popup_ab7b3835ca65477b962fa4beec1bc013.setContent(html_733875fc260f4eafb9430825e4f0085c);
+            
+
+            marker_479b638f4bad40dba0bdce0db8907272.bindPopup(popup_ab7b3835ca65477b962fa4beec1bc013);
+
+            
+        
+        
+            
+
+            var marker_1d66db4911e44de59c2b47514997a0b5 = L.marker(
+                [22.3852959,114.199399883],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_6066e23127714b85951560f4f1460429 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1d66db4911e44de59c2b47514997a0b5.setIcon(icon_6066e23127714b85951560f4f1460429);
+            
+        
+            
+            var popup_abb7c7d3e220490987ddbb54e27970e1 = L.popup({maxWidth: '300'});
+
+            
+                var html_543968cbb1a649fc9ae888aeecb35a2e = $('         <div id="html_543968cbb1a649fc9ae888aeecb35a2e"                 style="width: 100.0%; height: 100.0%;">                 富豪花園</div>                 ')[0];
+                popup_abb7c7d3e220490987ddbb54e27970e1.setContent(html_543968cbb1a649fc9ae888aeecb35a2e);
+            
+
+            marker_1d66db4911e44de59c2b47514997a0b5.bindPopup(popup_abb7c7d3e220490987ddbb54e27970e1);
+
+            
+        
+        
+            
+
+            var marker_a79a5955fb394828972e108cf6c9e8fe = L.marker(
+                [-33.8621184,18.5059521],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_5e4b8f3265344cf99d76a2e67f2c2ba4 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a79a5955fb394828972e108cf6c9e8fe.setIcon(icon_5e4b8f3265344cf99d76a2e67f2c2ba4);
+            
+        
+            
+            var popup_906c5a1a77924ae2afea5537f268d098 = L.popup({maxWidth: '300'});
+
+            
+                var html_f25d31a1b99943868ccf1e7d551b2f4c = $('         <div id="html_f25d31a1b99943868ccf1e7d551b2f4c"                 style="width: 100.0%; height: 100.0%;">                 駿景園</div>                 ')[0];
+                popup_906c5a1a77924ae2afea5537f268d098.setContent(html_f25d31a1b99943868ccf1e7d551b2f4c);
+            
+
+            marker_a79a5955fb394828972e108cf6c9e8fe.bindPopup(popup_906c5a1a77924ae2afea5537f268d098);
+
+            
+        
+        
+            
+
+            var marker_c781a412e04c49c4af3c6a69eed35cda = L.marker(
+                [22.45295185,114.171143824],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_f655767b81e340eb8f763c24ce3d605b = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c781a412e04c49c4af3c6a69eed35cda.setIcon(icon_f655767b81e340eb8f763c24ce3d605b);
+            
+        
+            
+            var popup_37c70b15bd954ef9bfc06715d566eab1 = L.popup({maxWidth: '300'});
+
+            
+                var html_9db5c77cbd4a46baa16abe3884ed7877 = $('         <div id="html_9db5c77cbd4a46baa16abe3884ed7877"                 style="width: 100.0%; height: 100.0%;">                 大埔中心</div>                 ')[0];
+                popup_37c70b15bd954ef9bfc06715d566eab1.setContent(html_9db5c77cbd4a46baa16abe3884ed7877);
+            
+
+            marker_c781a412e04c49c4af3c6a69eed35cda.bindPopup(popup_37c70b15bd954ef9bfc06715d566eab1);
+
+            
+        
+        
+            
+
+            var marker_cd517fb3d88d446192a86c2bd32b80d3 = L.marker(
+                [22.3812598,114.195500558],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_52f2491346b34b56a5ec57b4a14f7714 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cd517fb3d88d446192a86c2bd32b80d3.setIcon(icon_52f2491346b34b56a5ec57b4a14f7714);
+            
+        
+            
+            var popup_7a5a0f8e69354f3aa9fc055979af2cd4 = L.popup({maxWidth: '300'});
+
+            
+                var html_0e0e53d315404668a24b6087ffb7eaab = $('         <div id="html_0e0e53d315404668a24b6087ffb7eaab"                 style="width: 100.0%; height: 100.0%;">                 河畔花園</div>                 ')[0];
+                popup_7a5a0f8e69354f3aa9fc055979af2cd4.setContent(html_0e0e53d315404668a24b6087ffb7eaab);
+            
+
+            marker_cd517fb3d88d446192a86c2bd32b80d3.bindPopup(popup_7a5a0f8e69354f3aa9fc055979af2cd4);
+
+            
+        
+        
+            
+
+            var marker_0e698ffb06d24c5cb273128a0bc1ec1a = L.marker(
+                [25.0419547,-77.2828072522],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_8fc01d5836f94b308243eee38021fd22 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0e698ffb06d24c5cb273128a0bc1ec1a.setIcon(icon_8fc01d5836f94b308243eee38021fd22);
+            
+        
+            
+            var popup_7942e0390b08465393d19605ce550414 = L.popup({maxWidth: '300'});
+
+            
+                var html_d247f13a56e74afcb9629ad96fcc7728 = $('         <div id="html_d247f13a56e74afcb9629ad96fcc7728"                 style="width: 100.0%; height: 100.0%;">                 豫豐花園</div>                 ')[0];
+                popup_7942e0390b08465393d19605ce550414.setContent(html_d247f13a56e74afcb9629ad96fcc7728);
+            
+
+            marker_0e698ffb06d24c5cb273128a0bc1ec1a.bindPopup(popup_7942e0390b08465393d19605ce550414);
+
+            
+        
+        
+            
+
+            var marker_b55816ebbb8f4b9ea06c99114c6ba8b8 = L.marker(
+                [41.6423628,-5.6115911],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_b876f3926fef42b1b8604f2733175ec6 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b55816ebbb8f4b9ea06c99114c6ba8b8.setIcon(icon_b876f3926fef42b1b8604f2733175ec6);
+            
+        
+            
+            var popup_eb8caad876d543b4bacf90bc55a3dc88 = L.popup({maxWidth: '300'});
+
+            
+                var html_4c33830def524b24b199cc5d62417f97 = $('         <div id="html_4c33830def524b24b199cc5d62417f97"                 style="width: 100.0%; height: 100.0%;">                 星河明居</div>                 ')[0];
+                popup_eb8caad876d543b4bacf90bc55a3dc88.setContent(html_4c33830def524b24b199cc5d62417f97);
+            
+
+            marker_b55816ebbb8f4b9ea06c99114c6ba8b8.bindPopup(popup_eb8caad876d543b4bacf90bc55a3dc88);
+
+            
+        
+        
+            
+
+            var marker_379bae83f5c646b4ad5cc8eb4385f2f1 = L.marker(
+                [22.32334125,114.212834233],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_309fedf3127243849764a469caf8c65b = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_379bae83f5c646b4ad5cc8eb4385f2f1.setIcon(icon_309fedf3127243849764a469caf8c65b);
+            
+        
+            
+            var popup_9d3c90f907a34d37ade2097c40f00f51 = L.popup({maxWidth: '300'});
+
+            
+                var html_60ab3cfe409e470a9fb473123d6f2b07 = $('         <div id="html_60ab3cfe409e470a9fb473123d6f2b07"                 style="width: 100.0%; height: 100.0%;">                 德福花園</div>                 ')[0];
+                popup_9d3c90f907a34d37ade2097c40f00f51.setContent(html_60ab3cfe409e470a9fb473123d6f2b07);
+            
+
+            marker_379bae83f5c646b4ad5cc8eb4385f2f1.bindPopup(popup_9d3c90f907a34d37ade2097c40f00f51);
+
+            
+        
+        
+            
+
+            var marker_658fbe7c410d4a07848334e8bb285c9e = L.marker(
+                [22.3050731,114.1906306],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_4fd41524ae724191909fd086824d60af = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_658fbe7c410d4a07848334e8bb285c9e.setIcon(icon_4fd41524ae724191909fd086824d60af);
+            
+        
+            
+            var popup_397c23ae0a634256bb4d4f5c1c191137 = L.popup({maxWidth: '300'});
+
+            
+                var html_9e182896a09448b3bc0534c26d9072ab = $('         <div id="html_9e182896a09448b3bc0534c26d9072ab"                 style="width: 100.0%; height: 100.0%;">                 黃埔花園</div>                 ')[0];
+                popup_397c23ae0a634256bb4d4f5c1c191137.setContent(html_9e182896a09448b3bc0534c26d9072ab);
+            
+
+            marker_658fbe7c410d4a07848334e8bb285c9e.bindPopup(popup_397c23ae0a634256bb4d4f5c1c191137);
+
+            
+        
+        
+            
+
+            var marker_5082fdeb11184aae9fcd44e1636870fd = L.marker(
+                [22.372112,113.969315111],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_4587594dc28c4c808d077e375b119b0c = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5082fdeb11184aae9fcd44e1636870fd.setIcon(icon_4587594dc28c4c808d077e375b119b0c);
+            
+        
+            
+            var popup_cc720ca30e17428ab8244579e98ec83c = L.popup({maxWidth: '300'});
+
+            
+                var html_1d6b0c4514ac4e87b41a699a867ce21e = $('         <div id="html_1d6b0c4514ac4e87b41a699a867ce21e"                 style="width: 100.0%; height: 100.0%;">                 邁亞美海灣</div>                 ')[0];
+                popup_cc720ca30e17428ab8244579e98ec83c.setContent(html_1d6b0c4514ac4e87b41a699a867ce21e);
+            
+
+            marker_5082fdeb11184aae9fcd44e1636870fd.bindPopup(popup_cc720ca30e17428ab8244579e98ec83c);
+
+            
+        
+        
+            
+
+            var marker_6900c7525bf442db8854f6d62d35168d = L.marker(
+                [22.37255015,113.966709659],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_84e610179a7d47a7ad4c4ec42a6d10f5 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6900c7525bf442db8854f6d62d35168d.setIcon(icon_84e610179a7d47a7ad4c4ec42a6d10f5);
+            
+        
+            
+            var popup_c9da2ba740664475827455f1006bdbac = L.popup({maxWidth: '300'});
+
+            
+                var html_c8b5bfed71b54d4c86350cb0660f066e = $('         <div id="html_c8b5bfed71b54d4c86350cb0660f066e"                 style="width: 100.0%; height: 100.0%;">                 海翠花園</div>                 ')[0];
+                popup_c9da2ba740664475827455f1006bdbac.setContent(html_c8b5bfed71b54d4c86350cb0660f066e);
+            
+
+            marker_6900c7525bf442db8854f6d62d35168d.bindPopup(popup_c9da2ba740664475827455f1006bdbac);
+
+            
+        
+        
+            
+
+            var marker_c8a0b152400f4b2a915307ac98b97254 = L.marker(
+                [22.26170255,114.132221068],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_54ca171be6e1468cab4232424de09558 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c8a0b152400f4b2a915307ac98b97254.setIcon(icon_54ca171be6e1468cab4232424de09558);
+            
+        
+            
+            var popup_d3f559e53ac541599e58a1d2bc0ab1db = L.popup({maxWidth: '300'});
+
+            
+                var html_58ab1e1f682547d5a0763f74059881e9 = $('         <div id="html_58ab1e1f682547d5a0763f74059881e9"                 style="width: 100.0%; height: 100.0%;">                 碧瑤灣</div>                 ')[0];
+                popup_d3f559e53ac541599e58a1d2bc0ab1db.setContent(html_58ab1e1f682547d5a0763f74059881e9);
+            
+
+            marker_c8a0b152400f4b2a915307ac98b97254.bindPopup(popup_d3f559e53ac541599e58a1d2bc0ab1db);
+
+            
+        
+        
+            
+
+            var marker_16358dc006214e209904b89e6b4f94b8 = L.marker(
+                [15.2039188,145.729526827],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_784f888047204d76b8dcef5761696225 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_16358dc006214e209904b89e6b4f94b8.setIcon(icon_784f888047204d76b8dcef5761696225);
+            
+        
+            
+            var popup_78ae4d6378954f40bd35b0b175e475b1 = L.popup({maxWidth: '300'});
+
+            
+                var html_8907c21af7f0433f88124c918eea1e92 = $('         <div id="html_8907c21af7f0433f88124c918eea1e92"                 style="width: 100.0%; height: 100.0%;">                 會展中心 會景閣</div>                 ')[0];
+                popup_78ae4d6378954f40bd35b0b175e475b1.setContent(html_8907c21af7f0433f88124c918eea1e92);
+            
+
+            marker_16358dc006214e209904b89e6b4f94b8.bindPopup(popup_78ae4d6378954f40bd35b0b175e475b1);
+
+            
+        
+        
+            
+
+            var marker_388d41fe927244a2ab555d4379e884b6 = L.marker(
+                [33.0692853,-96.4897096],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_04b3f3fd541144d58195bd6e8abb0f7a = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_388d41fe927244a2ab555d4379e884b6.setIcon(icon_04b3f3fd541144d58195bd6e8abb0f7a);
+            
+        
+            
+            var popup_9e4d80e967594d66b30e591440e1a07e = L.popup({maxWidth: '300'});
+
+            
+                var html_d246cea227484bd896ffeeae7f659cf0 = $('         <div id="html_d246cea227484bd896ffeeae7f659cf0"                 style="width: 100.0%; height: 100.0%;">                 比華利山</div>                 ')[0];
+                popup_9e4d80e967594d66b30e591440e1a07e.setContent(html_d246cea227484bd896ffeeae7f659cf0);
+            
+
+            marker_388d41fe927244a2ab555d4379e884b6.bindPopup(popup_9e4d80e967594d66b30e591440e1a07e);
+
+            
+        
+        
+            
+
+            var marker_fb68325a129b406783a4fda708092a49 = L.marker(
+                [22.2868075,114.214439],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_a19526cb8f4b466da5ee047be9a6180c = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fb68325a129b406783a4fda708092a49.setIcon(icon_a19526cb8f4b466da5ee047be9a6180c);
+            
+        
+            
+            var popup_9344912f0a084363b90479244b742028 = L.popup({maxWidth: '300'});
+
+            
+                var html_3dc2ceee7c6a4e34a74dc9db5f480996 = $('         <div id="html_3dc2ceee7c6a4e34a74dc9db5f480996"                 style="width: 100.0%; height: 100.0%;">                 太古城</div>                 ')[0];
+                popup_9344912f0a084363b90479244b742028.setContent(html_3dc2ceee7c6a4e34a74dc9db5f480996);
+            
+
+            marker_fb68325a129b406783a4fda708092a49.bindPopup(popup_9344912f0a084363b90479244b742028);
+
+            
+        
+        
+            
+
+            var marker_d7ac445364ce4b8a8fe508900559954b = L.marker(
+                [22.29109215,114.202626545],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_fd5b236b8afb4074848be138301e27c8 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d7ac445364ce4b8a8fe508900559954b.setIcon(icon_fd5b236b8afb4074848be138301e27c8);
+            
+        
+            
+            var popup_ebcf7c9ac1044cfab995da2d503eaf35 = L.popup({maxWidth: '300'});
+
+            
+                var html_eb5bd6766bf54adba62bd270c96205a8 = $('         <div id="html_eb5bd6766bf54adba62bd270c96205a8"                 style="width: 100.0%; height: 100.0%;">                 港運城</div>                 ')[0];
+                popup_ebcf7c9ac1044cfab995da2d503eaf35.setContent(html_eb5bd6766bf54adba62bd270c96205a8);
+            
+
+            marker_d7ac445364ce4b8a8fe508900559954b.bindPopup(popup_ebcf7c9ac1044cfab995da2d503eaf35);
+
+            
+        
+        
+            
+
+            var marker_af2397fd61834010a261a327980b0d35 = L.marker(
+                [22.37821505,114.103756384],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_5a6337e5f3454132bffd8863ee4aa0a4 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_af2397fd61834010a261a327980b0d35.setIcon(icon_5a6337e5f3454132bffd8863ee4aa0a4);
+            
+        
+            
+            var popup_efdbe8374c8040868bdb19c9fab45c28 = L.popup({maxWidth: '300'});
+
+            
+                var html_f077bbebc14445c582472737bf48bfea = $('         <div id="html_f077bbebc14445c582472737bf48bfea"                 style="width: 100.0%; height: 100.0%;">                 荃威花園</div>                 ')[0];
+                popup_efdbe8374c8040868bdb19c9fab45c28.setContent(html_f077bbebc14445c582472737bf48bfea);
+            
+
+            marker_af2397fd61834010a261a327980b0d35.bindPopup(popup_efdbe8374c8040868bdb19c9fab45c28);
+
+            
+        
+        
+            
+
+            var marker_f8826842abb44acca913b295ac672bd3 = L.marker(
+                [22.34406385,114.107104726],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_4ec20ee0379144c9bd02ceecbc835132 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f8826842abb44acca913b295ac672bd3.setIcon(icon_4ec20ee0379144c9bd02ceecbc835132);
+            
+        
+            
+            var popup_aa1331d1c25c4035ac499811edec60d0 = L.popup({maxWidth: '300'});
+
+            
+                var html_797e91e49a274aac92159b1f81af859f = $('         <div id="html_797e91e49a274aac92159b1f81af859f"                 style="width: 100.0%; height: 100.0%;">                 美景花園</div>                 ')[0];
+                popup_aa1331d1c25c4035ac499811edec60d0.setContent(html_797e91e49a274aac92159b1f81af859f);
+            
+
+            marker_f8826842abb44acca913b295ac672bd3.bindPopup(popup_aa1331d1c25c4035ac499811edec60d0);
+
+            
+        
+        
+            
+
+            var marker_f6f63a03f1b34884a3aa9fced1856776 = L.marker(
+                [22.27498545,114.173717138],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_622129dcce034a1d97df7bdea7e3a85f = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f6f63a03f1b34884a3aa9fced1856776.setIcon(icon_622129dcce034a1d97df7bdea7e3a85f);
+            
+        
+            
+            var popup_e40f452ef3ee4ad0822d62f13322e547 = L.popup({maxWidth: '300'});
+
+            
+                var html_19ea7c30c6e44013b07226e09d5e93b6 = $('         <div id="html_19ea7c30c6e44013b07226e09d5e93b6"                 style="width: 100.0%; height: 100.0%;">                 尚翹峰</div>                 ')[0];
+                popup_e40f452ef3ee4ad0822d62f13322e547.setContent(html_19ea7c30c6e44013b07226e09d5e93b6);
+            
+
+            marker_f6f63a03f1b34884a3aa9fced1856776.bindPopup(popup_e40f452ef3ee4ad0822d62f13322e547);
+
+            
+        
+        
+            
+
+            var marker_58f3b63dea704c4b8b37fd265491a546 = L.marker(
+                [22.28368075,114.223140565],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_083156c0387743d2abc6949e66d956e2 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_58f3b63dea704c4b8b37fd265491a546.setIcon(icon_083156c0387743d2abc6949e66d956e2);
+            
+        
+            
+            var popup_650f91c8ff4745acbf023768443613f6 = L.popup({maxWidth: '300'});
+
+            
+                var html_3dc7fdb560b84975934fca4fbd14d35a = $('         <div id="html_3dc7fdb560b84975934fca4fbd14d35a"                 style="width: 100.0%; height: 100.0%;">                 鯉景灣</div>                 ')[0];
+                popup_650f91c8ff4745acbf023768443613f6.setContent(html_3dc7fdb560b84975934fca4fbd14d35a);
+            
+
+            marker_58f3b63dea704c4b8b37fd265491a546.bindPopup(popup_650f91c8ff4745acbf023768443613f6);
+
+            
+        
+        
+            
+
+            var marker_3a2ece9188024e138bf04cccd2a3bd1b = L.marker(
+                [22.2850731,114.224660838],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_116db5ee5a914dd38208790d04933237 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3a2ece9188024e138bf04cccd2a3bd1b.setIcon(icon_116db5ee5a914dd38208790d04933237);
+            
+        
+            
+            var popup_79618d27d937463db7f0f4218a8d2c65 = L.popup({maxWidth: '300'});
+
+            
+                var html_c81385230bf4448d9a7c62731280fa4b = $('         <div id="html_c81385230bf4448d9a7c62731280fa4b"                 style="width: 100.0%; height: 100.0%;">                 嘉亨灣</div>                 ')[0];
+                popup_79618d27d937463db7f0f4218a8d2c65.setContent(html_c81385230bf4448d9a7c62731280fa4b);
+            
+
+            marker_3a2ece9188024e138bf04cccd2a3bd1b.bindPopup(popup_79618d27d937463db7f0f4218a8d2c65);
+
+            
+        
+        
+            
+
+            var marker_7196ba20ffe0471685bf427dbca5f9f4 = L.marker(
+                [22.2825515,114.2166966],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_86d87e7dba434feca181e66294bfdadf = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7196ba20ffe0471685bf427dbca5f9f4.setIcon(icon_86d87e7dba434feca181e66294bfdadf);
+            
+        
+            
+            var popup_7769584fb27c424fb92616c3b714c1a5 = L.popup({maxWidth: '300'});
+
+            
+                var html_92ab4e272c99460183b3fca61e6ab227 = $('         <div id="html_92ab4e272c99460183b3fca61e6ab227"                 style="width: 100.0%; height: 100.0%;">                 康怡花園</div>                 ')[0];
+                popup_7769584fb27c424fb92616c3b714c1a5.setContent(html_92ab4e272c99460183b3fca61e6ab227);
+            
+
+            marker_7196ba20ffe0471685bf427dbca5f9f4.bindPopup(popup_7769584fb27c424fb92616c3b714c1a5);
+
+            
+        
+        
+            
+
+            var marker_7a191cfdc3a840218aa1786a6af8f580 = L.marker(
+                [22.2575143,114.1393093],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_c011687595db45f18e71b0d66dea67a9 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7a191cfdc3a840218aa1786a6af8f580.setIcon(icon_c011687595db45f18e71b0d66dea67a9);
+            
+        
+            
+            var popup_046a2916e77145b4b95fdbab76c00cbb = L.popup({maxWidth: '300'});
+
+            
+                var html_a1fa11dfa3674830a31b58cc21e09325 = $('         <div id="html_a1fa11dfa3674830a31b58cc21e09325"                 style="width: 100.0%; height: 100.0%;">                 置富花園</div>                 ')[0];
+                popup_046a2916e77145b4b95fdbab76c00cbb.setContent(html_a1fa11dfa3674830a31b58cc21e09325);
+            
+
+            marker_7a191cfdc3a840218aa1786a6af8f580.bindPopup(popup_046a2916e77145b4b95fdbab76c00cbb);
+
+            
+        
+        
+            
+
+            var marker_ee2588a94d874076b159dbc8b30a35db = L.marker(
+                [22.2427346,114.148822107],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_cda04fafb97d48028f919a725dabda5f = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ee2588a94d874076b159dbc8b30a35db.setIcon(icon_cda04fafb97d48028f919a725dabda5f);
+            
+        
+            
+            var popup_f8efd20b868749bda89d34c23b258333 = L.popup({maxWidth: '300'});
+
+            
+                var html_a0399e651fcd4dfcace2d3c7118cc08a = $('         <div id="html_a0399e651fcd4dfcace2d3c7118cc08a"                 style="width: 100.0%; height: 100.0%;">                 海怡半島</div>                 ')[0];
+                popup_f8efd20b868749bda89d34c23b258333.setContent(html_a0399e651fcd4dfcace2d3c7118cc08a);
+            
+
+            marker_ee2588a94d874076b159dbc8b30a35db.bindPopup(popup_f8efd20b868749bda89d34c23b258333);
+
+            
+        
+        
+            
+
+            var marker_75b36360d0ed43c88961465d38700773 = L.marker(
+                [22.2581876,114.132376176],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_4a78dc45d8a449a5bc4cd3154c3cfa6d = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_75b36360d0ed43c88961465d38700773.setIcon(icon_4a78dc45d8a449a5bc4cd3154c3cfa6d);
+            
+        
+            
+            var popup_aa1dc89556cf4ca2be829e14f979b028 = L.popup({maxWidth: '300'});
+
+            
+                var html_2d5ef7a2c4a1467f965219b7dff7b4f4 = $('         <div id="html_2d5ef7a2c4a1467f965219b7dff7b4f4"                 style="width: 100.0%; height: 100.0%;">                 貝沙灣</div>                 ')[0];
+                popup_aa1dc89556cf4ca2be829e14f979b028.setContent(html_2d5ef7a2c4a1467f965219b7dff7b4f4);
+            
+
+            marker_75b36360d0ed43c88961465d38700773.bindPopup(popup_aa1dc89556cf4ca2be829e14f979b028);
+
+            
+        
+        
+            
+
+            var marker_a5d033201b8741699216e6129157b03c = L.marker(
+                [22.2438618,114.158820197],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_8944222059724ac287318b24023bcf25 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a5d033201b8741699216e6129157b03c.setIcon(icon_8944222059724ac287318b24023bcf25);
+            
+        
+            
+            var popup_04a1cbd1c6df4b2684735c1241e9256c = L.popup({maxWidth: '300'});
+
+            
+                var html_3a187a4d7c564a7482dc20e4f1670f81 = $('         <div id="html_3a187a4d7c564a7482dc20e4f1670f81"                 style="width: 100.0%; height: 100.0%;">                 深灣軒</div>                 ')[0];
+                popup_04a1cbd1c6df4b2684735c1241e9256c.setContent(html_3a187a4d7c564a7482dc20e4f1670f81);
+            
+
+            marker_a5d033201b8741699216e6129157b03c.bindPopup(popup_04a1cbd1c6df4b2684735c1241e9256c);
+
+            
+        
+        
+            
+
+            var marker_48c357a24341427988b73b47399fee20 = L.marker(
+                [34.849546,-82.4024189],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_f19860fe80c34b84b013d3fab5e87422 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_48c357a24341427988b73b47399fee20.setIcon(icon_f19860fe80c34b84b013d3fab5e87422);
+            
+        
+            
+            var popup_b9160e94243e4ebaa5480f5d0e7c98b5 = L.popup({maxWidth: '300'});
+
+            
+                var html_8cd9192cb0ed42a8a953d9456e237f76 = $('         <div id="html_8cd9192cb0ed42a8a953d9456e237f76"                 style="width: 100.0%; height: 100.0%;">                 聚賢居</div>                 ')[0];
+                popup_b9160e94243e4ebaa5480f5d0e7c98b5.setContent(html_8cd9192cb0ed42a8a953d9456e237f76);
+            
+
+            marker_48c357a24341427988b73b47399fee20.bindPopup(popup_b9160e94243e4ebaa5480f5d0e7c98b5);
+
+            
+        
+        
+            
+
+            var marker_c5d0c1be5c6a4e1ba5df0663f5569205 = L.marker(
+                [22.27664325,114.239772961],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_ec2016d397384c3188ee033a975131a7 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c5d0c1be5c6a4e1ba5df0663f5569205.setIcon(icon_ec2016d397384c3188ee033a975131a7);
+            
+        
+            
+            var popup_1eadc59dacdc42e088d88186b3bac4df = L.popup({maxWidth: '300'});
+
+            
+                var html_ab5537f48fdb4073a46157bf113d67db = $('         <div id="html_ab5537f48fdb4073a46157bf113d67db"                 style="width: 100.0%; height: 100.0%;">                 杏花村</div>                 ')[0];
+                popup_1eadc59dacdc42e088d88186b3bac4df.setContent(html_ab5537f48fdb4073a46157bf113d67db);
+            
+
+            marker_c5d0c1be5c6a4e1ba5df0663f5569205.bindPopup(popup_1eadc59dacdc42e088d88186b3bac4df);
+
+            
+        
+        
+            
+
+            var marker_c14a15550f0d436bbc38b00fc09918bd = L.marker(
+                [22.2661719,114.250905346],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_1cd21f3d67a04c6f8b1387e8e47d53cd = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c14a15550f0d436bbc38b00fc09918bd.setIcon(icon_1cd21f3d67a04c6f8b1387e8e47d53cd);
+            
+        
+            
+            var popup_0b867d812c994763be7a243e7413f79f = L.popup({maxWidth: '300'});
+
+            
+                var html_bad8bbd26fa74f3280bdb983ec029a0c = $('         <div id="html_bad8bbd26fa74f3280bdb983ec029a0c"                 style="width: 100.0%; height: 100.0%;">                 藍灣半島</div>                 ')[0];
+                popup_0b867d812c994763be7a243e7413f79f.setContent(html_bad8bbd26fa74f3280bdb983ec029a0c);
+            
+
+            marker_c14a15550f0d436bbc38b00fc09918bd.bindPopup(popup_0b867d812c994763be7a243e7413f79f);
+
+            
+        
+        
+            
+
+            var marker_dd09ae90a4574a529f280ae15bcb99e5 = L.marker(
+                [22.28362295,114.224702952],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_32225eceed214d31bc219e94ddd1aaa6 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_dd09ae90a4574a529f280ae15bcb99e5.setIcon(icon_32225eceed214d31bc219e94ddd1aaa6);
+            
+        
+            
+            var popup_80927317c29d4f04a49d37fe7a062dfb = L.popup({maxWidth: '300'});
+
+            
+                var html_63f476acdeaf4acab801b8b492ce8dc9 = $('         <div id="html_63f476acdeaf4acab801b8b492ce8dc9"                 style="width: 100.0%; height: 100.0%;">                 逸濤灣</div>                 ')[0];
+                popup_80927317c29d4f04a49d37fe7a062dfb.setContent(html_63f476acdeaf4acab801b8b492ce8dc9);
+            
+
+            marker_dd09ae90a4574a529f280ae15bcb99e5.bindPopup(popup_80927317c29d4f04a49d37fe7a062dfb);
+
+            
+        
+        
+            
+
+            var marker_14ae361d4e6647ad9ca46accfd3b7a15 = L.marker(
+                [22.2704416,114.193129902],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_fb50221b3f22447a8b7cfcaa48bdb3f1 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_14ae361d4e6647ad9ca46accfd3b7a15.setIcon(icon_fb50221b3f22447a8b7cfcaa48bdb3f1);
+            
+        
+            
+            var popup_209a428db4f440e78c0a6b3964e3ab4d = L.popup({maxWidth: '300'});
+
+            
+                var html_fdef5dbea410442a87779edf52b62aa7 = $('         <div id="html_fdef5dbea410442a87779edf52b62aa7"                 style="width: 100.0%; height: 100.0%;">                 嘉雲臺</div>                 ')[0];
+                popup_209a428db4f440e78c0a6b3964e3ab4d.setContent(html_fdef5dbea410442a87779edf52b62aa7);
+            
+
+            marker_14ae361d4e6647ad9ca46accfd3b7a15.bindPopup(popup_209a428db4f440e78c0a6b3964e3ab4d);
+
+            
+        
+        
+            
+
+            var marker_87b43e42b7a041d58dac13d2434384ec = L.marker(
+                [43.7478572,-70.3319947],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_a7c11327fc8243559fa1487b7461a584 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_87b43e42b7a041d58dac13d2434384ec.setIcon(icon_a7c11327fc8243559fa1487b7461a584);
+            
+        
+            
+            var popup_bf39e3af7c234e2685196f0138b94c92 = L.popup({maxWidth: '300'});
+
+            
+                var html_c55a70e5feda457892df5d63eac2c296 = $('         <div id="html_c55a70e5feda457892df5d63eac2c296"                 style="width: 100.0%; height: 100.0%;">                 禮頓山</div>                 ')[0];
+                popup_bf39e3af7c234e2685196f0138b94c92.setContent(html_c55a70e5feda457892df5d63eac2c296);
+            
+
+            marker_87b43e42b7a041d58dac13d2434384ec.bindPopup(popup_bf39e3af7c234e2685196f0138b94c92);
+
+            
+        
+        
+            
+
+            var marker_15ba7d0406534514a9f478f3e311953b = L.marker(
+                [22.2769749,114.1937244],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_64ea4c928ad744728700ac440e531d69 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_15ba7d0406534514a9f478f3e311953b.setIcon(icon_64ea4c928ad744728700ac440e531d69);
+            
+        
+            
+            var popup_0252a1f230754d51ace3c3c0c015525c = L.popup({maxWidth: '300'});
+
+            
+                var html_6c356c7b1a244b04a2a3f339812be485 = $('         <div id="html_6c356c7b1a244b04a2a3f339812be485"                 style="width: 100.0%; height: 100.0%;">                 光明臺</div>                 ')[0];
+                popup_0252a1f230754d51ace3c3c0c015525c.setContent(html_6c356c7b1a244b04a2a3f339812be485);
+            
+
+            marker_15ba7d0406534514a9f478f3e311953b.bindPopup(popup_0252a1f230754d51ace3c3c0c015525c);
+
+            
+        
+        
+            
+
+            var marker_ebaea231bd6d4987827d8c3fd5d8746d = L.marker(
+                [22.2849703,114.133427225],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_a3b01343672f4d0dbb83d6df47fcade9 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ebaea231bd6d4987827d8c3fd5d8746d.setIcon(icon_a3b01343672f4d0dbb83d6df47fcade9);
+            
+        
+            
+            var popup_e56b294580594abda28463329b2f2578 = L.popup({maxWidth: '300'});
+
+            
+                var html_379bcc6e427a4c99a71c10ecb9b731bf = $('         <div id="html_379bcc6e427a4c99a71c10ecb9b731bf"                 style="width: 100.0%; height: 100.0%;">                 寶翠園</div>                 ')[0];
+                popup_e56b294580594abda28463329b2f2578.setContent(html_379bcc6e427a4c99a71c10ecb9b731bf);
+            
+
+            marker_ebaea231bd6d4987827d8c3fd5d8746d.bindPopup(popup_e56b294580594abda28463329b2f2578);
+
+            
+        
+        
+            
+
+            var marker_fa96798ae17f47c585b542894a71baef = L.marker(
+                [57.1434019,-2.1204798],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_f4d0bbe601484d32b8c7ab5f6a8f12ea = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fa96798ae17f47c585b542894a71baef.setIcon(icon_f4d0bbe601484d32b8c7ab5f6a8f12ea);
+            
+        
+            
+            var popup_bb32fad48e1b4ef7a04796bea6780bf9 = L.popup({maxWidth: '300'});
+
+            
+                var html_1060069a83384f01bb93a89effce60c2 = $('         <div id="html_1060069a83384f01bb93a89effce60c2"                 style="width: 100.0%; height: 100.0%;">                 帝后華庭</div>                 ')[0];
+                popup_bb32fad48e1b4ef7a04796bea6780bf9.setContent(html_1060069a83384f01bb93a89effce60c2);
+            
+
+            marker_fa96798ae17f47c585b542894a71baef.bindPopup(popup_bb32fad48e1b4ef7a04796bea6780bf9);
+
+            
+        
+        
+            
+
+            var marker_d5a08fb8ac02499384d453cacb90be6a = L.marker(
+                [51.8546355,-1.1648286],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_64eeb6d5b3ec4815ac4ee183e4f078ce = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d5a08fb8ac02499384d453cacb90be6a.setIcon(icon_64eeb6d5b3ec4815ac4ee183e4f078ce);
+            
+        
+            
+            var popup_261bb6d2b2de4f009c9ebb4027c00864 = L.popup({maxWidth: '300'});
+
+            
+                var html_bb4064983a9a48029efef80b81372f8b = $('         <div id="html_bb4064983a9a48029efef80b81372f8b"                 style="width: 100.0%; height: 100.0%;">                 泓都</div>                 ')[0];
+                popup_261bb6d2b2de4f009c9ebb4027c00864.setContent(html_bb4064983a9a48029efef80b81372f8b);
+            
+
+            marker_d5a08fb8ac02499384d453cacb90be6a.bindPopup(popup_261bb6d2b2de4f009c9ebb4027c00864);
+
+            
+        
+        
+            
+
+            var marker_6f21f312dea5464fad5f55d4314fa42f = L.marker(
+                [22.3713465,113.9938232],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_0b24a64dda9141b797890ad27dc03861 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6f21f312dea5464fad5f55d4314fa42f.setIcon(icon_0b24a64dda9141b797890ad27dc03861);
+            
+        
+            
+            var popup_8156633631b344e19eb5627795178d57 = L.popup({maxWidth: '300'});
+
+            
+                var html_e32348fff1494fbab4fe0279d3ffb35c = $('         <div id="html_e32348fff1494fbab4fe0279d3ffb35c"                 style="width: 100.0%; height: 100.0%;">                 香港黃金海岸</div>                 ')[0];
+                popup_8156633631b344e19eb5627795178d57.setContent(html_e32348fff1494fbab4fe0279d3ffb35c);
+            
+
+            marker_6f21f312dea5464fad5f55d4314fa42f.bindPopup(popup_8156633631b344e19eb5627795178d57);
+
+            
+        
+        
+            
+
+            var marker_84b37187b93b4c428905d73335b877c4 = L.marker(
+                [49.1837824,-123.133723636],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_64c7a8261b34452b9e59fed545fb8edf = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_84b37187b93b4c428905d73335b877c4.setIcon(icon_64c7a8261b34452b9e59fed545fb8edf);
+            
+        
+            
+            var popup_ef6bae1b62ee49268171f6a95068ec80 = L.popup({maxWidth: '300'});
+
+            
+                var html_301f780a26d04055a4d9f215d39e921f = $('         <div id="html_301f780a26d04055a4d9f215d39e921f"                 style="width: 100.0%; height: 100.0%;">                 香港仔中心</div>                 ')[0];
+                popup_ef6bae1b62ee49268171f6a95068ec80.setContent(html_301f780a26d04055a4d9f215d39e921f);
+            
+
+            marker_84b37187b93b4c428905d73335b877c4.bindPopup(popup_ef6bae1b62ee49268171f6a95068ec80);
+
+            
+        
+        
+            
+
+            var marker_43e5b48df913427cb70b5d1564da2dbd = L.marker(
+                [22.2571668,114.199688275],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_57c7eeb0561f4180be5dab90c186606c = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_43e5b48df913427cb70b5d1564da2dbd.setIcon(icon_57c7eeb0561f4180be5dab90c186606c);
+            
+        
+            
+            var popup_a40dcd6954ad4fc89639ffd0ba2f2315 = L.popup({maxWidth: '300'});
+
+            
+                var html_e3a410c403e04598b1fab733814c3436 = $('         <div id="html_e3a410c403e04598b1fab733814c3436"                 style="width: 100.0%; height: 100.0%;">                 陽明山莊</div>                 ')[0];
+                popup_a40dcd6954ad4fc89639ffd0ba2f2315.setContent(html_e3a410c403e04598b1fab733814c3436);
+            
+
+            marker_43e5b48df913427cb70b5d1564da2dbd.bindPopup(popup_a40dcd6954ad4fc89639ffd0ba2f2315);
+
+            
+        
+        
+            
+
+            var marker_0e153d0dcd9f4a66b56c9262f9c149e1 = L.marker(
+                [22.2906493,114.193899725],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_4a5b99c4fae343e19ea963522a7a9d06 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0e153d0dcd9f4a66b56c9262f9c149e1.setIcon(icon_4a5b99c4fae343e19ea963522a7a9d06);
+            
+        
+            
+            var popup_db66a732068948be863bff9a9df74e1a = L.popup({maxWidth: '300'});
+
+            
+                var html_33e7598bdd454bbd999449fb2eaa7ac2 = $('         <div id="html_33e7598bdd454bbd999449fb2eaa7ac2"                 style="width: 100.0%; height: 100.0%;">                 城市花園</div>                 ')[0];
+                popup_db66a732068948be863bff9a9df74e1a.setContent(html_33e7598bdd454bbd999449fb2eaa7ac2);
+            
+
+            marker_0e153d0dcd9f4a66b56c9262f9c149e1.bindPopup(popup_db66a732068948be863bff9a9df74e1a);
+
+            
+        
+        
+            
+
+            var marker_de0c8bfb5f42453ba64b822c3d502514 = L.marker(
+                [22.2922669,114.196479201],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_52bfc8d3d67d4beb8b77b6d6545a9ffa = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_de0c8bfb5f42453ba64b822c3d502514.setIcon(icon_52bfc8d3d67d4beb8b77b6d6545a9ffa);
+            
+        
+            
+            var popup_86e5b5ec1dc04f92bf042616ce3d910d = L.popup({maxWidth: '300'});
+
+            
+                var html_4f64a0c26ca54d4fad121fc897607a73 = $('         <div id="html_4f64a0c26ca54d4fad121fc897607a73"                 style="width: 100.0%; height: 100.0%;">                 和富中心</div>                 ')[0];
+                popup_86e5b5ec1dc04f92bf042616ce3d910d.setContent(html_4f64a0c26ca54d4fad121fc897607a73);
+            
+
+            marker_de0c8bfb5f42453ba64b822c3d502514.bindPopup(popup_86e5b5ec1dc04f92bf042616ce3d910d);
+
+            
+        
+        
+            
+
+            var marker_cb0512598efa4b769b63564500e920c5 = L.marker(
+                [22.2820863,114.214162511],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_02c95e393a3841fda2d95bdc443c4bd4 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cb0512598efa4b769b63564500e920c5.setIcon(icon_02c95e393a3841fda2d95bdc443c4bd4);
+            
+        
+            
+            var popup_b7480f9051e641adacb680a0b2c16a16 = L.popup({maxWidth: '300'});
+
+            
+                var html_781400f286a344279f8ccf1019673f3b = $('         <div id="html_781400f286a344279f8ccf1019673f3b"                 style="width: 100.0%; height: 100.0%;">                 南豐新邨</div>                 ')[0];
+                popup_b7480f9051e641adacb680a0b2c16a16.setContent(html_781400f286a344279f8ccf1019673f3b);
+            
+
+            marker_cb0512598efa4b769b63564500e920c5.bindPopup(popup_b7480f9051e641adacb680a0b2c16a16);
+
+            
+        
+        
+            
+
+            var marker_ba618543b5dc47b7b0c7a6d607a72a8e = L.marker(
+                [51.0707401,-114.1372307],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_72a4c1d2255e4d77a1a1d347d8af927d = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ba618543b5dc47b7b0c7a6d607a72a8e.setIcon(icon_72a4c1d2255e4d77a1a1d347d8af927d);
+            
+        
+            
+            var popup_0ece478c9b4e41b992829263b367c30a = L.popup({maxWidth: '300'});
+
+            
+                var html_11904ceef56d4ac797d583bb20c66558 = $('         <div id="html_11904ceef56d4ac797d583bb20c66558"                 style="width: 100.0%; height: 100.0%;">                 翰林軒</div>                 ')[0];
+                popup_0ece478c9b4e41b992829263b367c30a.setContent(html_11904ceef56d4ac797d583bb20c66558);
+            
+
+            marker_ba618543b5dc47b7b0c7a6d607a72a8e.bindPopup(popup_0ece478c9b4e41b992829263b367c30a);
+
+            
+        
+        
+            
+
+            var marker_12d67f72fc9643559922af5e503ac433 = L.marker(
+                [51.551961,-0.2213068],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_e480e4d132834a5297cb703fd6bd1154 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_12d67f72fc9643559922af5e503ac433.setIcon(icon_e480e4d132834a5297cb703fd6bd1154);
+            
+        
+            
+            var popup_987646869de04a1e8585aba4b7301706 = L.popup({maxWidth: '300'});
+
+            
+                var html_7d22cd0e1f704f3d84e77a19768d9a7e = $('         <div id="html_7d22cd0e1f704f3d84e77a19768d9a7e"                 style="width: 100.0%; height: 100.0%;">                 嘉富麗苑</div>                 ')[0];
+                popup_987646869de04a1e8585aba4b7301706.setContent(html_7d22cd0e1f704f3d84e77a19768d9a7e);
+            
+
+            marker_12d67f72fc9643559922af5e503ac433.bindPopup(popup_987646869de04a1e8585aba4b7301706);
+
+            
+        
+        
+            
+
+            var marker_f849ada23e4e434cb825aec47017bcc6 = L.marker(
+                [51.4856522,-0.1885704],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_faa85e93cb9c4784ad9129a2c8e4e52b = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f849ada23e4e434cb825aec47017bcc6.setIcon(icon_faa85e93cb9c4784ad9129a2c8e4e52b);
+            
+        
+            
+            var popup_d65533a1cccb44ae926d2e2f3d416d46 = L.popup({maxWidth: '300'});
+
+            
+                var html_dd1b4672c0fd4549857ee7835a459ae5 = $('         <div id="html_dd1b4672c0fd4549857ee7835a459ae5"                 style="width: 100.0%; height: 100.0%;">                 地利根德閣</div>                 ')[0];
+                popup_d65533a1cccb44ae926d2e2f3d416d46.setContent(html_dd1b4672c0fd4549857ee7835a459ae5);
+            
+
+            marker_f849ada23e4e434cb825aec47017bcc6.bindPopup(popup_d65533a1cccb44ae926d2e2f3d416d46);
+
+            
+        
+        
+            
+
+            var marker_233ad2e8fd874bc3bfa2e419d0bb0409 = L.marker(
+                [22.27558315,114.152832138],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_a871c950c0114e14aa88b3eaf2786f79 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_233ad2e8fd874bc3bfa2e419d0bb0409.setIcon(icon_a871c950c0114e14aa88b3eaf2786f79);
+            
+        
+            
+            var popup_3d48c45dd50342af935933af35cc200d = L.popup({maxWidth: '300'});
+
+            
+                var html_2827258b634f4da0b63ed627b68fb813 = $('         <div id="html_2827258b634f4da0b63ed627b68fb813"                 style="width: 100.0%; height: 100.0%;">                 帝景園</div>                 ')[0];
+                popup_3d48c45dd50342af935933af35cc200d.setContent(html_2827258b634f4da0b63ed627b68fb813);
+            
+
+            marker_233ad2e8fd874bc3bfa2e419d0bb0409.bindPopup(popup_3d48c45dd50342af935933af35cc200d);
+
+            
+        
+        
+            
+
+            var marker_b3b3cd9c5dea45e2880d710a5a692694 = L.marker(
+                [40.4057986,-108.9859505],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_b72ca96719114840a4546e4c9366c705 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b3b3cd9c5dea45e2880d710a5a692694.setIcon(icon_b72ca96719114840a4546e4c9366c705);
+            
+        
+            
+            var popup_68eca87bf72a43bc888b88bff5d491aa = L.popup({maxWidth: '300'});
+
+            
+                var html_d707f423a0a944bca0d78f73e2da042e = $('         <div id="html_d707f423a0a944bca0d78f73e2da042e"                 style="width: 100.0%; height: 100.0%;">                 雍景臺</div>                 ')[0];
+                popup_68eca87bf72a43bc888b88bff5d491aa.setContent(html_d707f423a0a944bca0d78f73e2da042e);
+            
+
+            marker_b3b3cd9c5dea45e2880d710a5a692694.bindPopup(popup_68eca87bf72a43bc888b88bff5d491aa);
+
+            
+        
+        
+            
+
+            var marker_696322d421d64511ac78322068b43fd8 = L.marker(
+                [22.3269679,114.21441693],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_be02afe2bdc14185989a6ffb12585c3a = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_696322d421d64511ac78322068b43fd8.setIcon(icon_be02afe2bdc14185989a6ffb12585c3a);
+            
+        
+            
+            var popup_7a32e18070e54491951e549937d991bd = L.popup({maxWidth: '300'});
+
+            
+                var html_7d202918aa654e56a62ec9bf0f972fc8 = $('         <div id="html_7d202918aa654e56a62ec9bf0f972fc8"                 style="width: 100.0%; height: 100.0%;">                 得寶花園</div>                 ')[0];
+                popup_7a32e18070e54491951e549937d991bd.setContent(html_7d202918aa654e56a62ec9bf0f972fc8);
+            
+
+            marker_696322d421d64511ac78322068b43fd8.bindPopup(popup_7a32e18070e54491951e549937d991bd);
+
+            
+        
+        
+            
+
+            var marker_d2f5311423374cc4bedf5310c8a30ed1 = L.marker(
+                [22.3375366,114.13986085],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_9224cf6bf0fe4e799d34ce8aebdac42b = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d2f5311423374cc4bedf5310c8a30ed1.setIcon(icon_9224cf6bf0fe4e799d34ce8aebdac42b);
+            
+        
+            
+            var popup_7f5680e0f1ca423cba9ec5421baac442 = L.popup({maxWidth: '300'});
+
+            
+                var html_d059e1e864534ee1bd951604cc07c46f = $('         <div id="html_d059e1e864534ee1bd951604cc07c46f"                 style="width: 100.0%; height: 100.0%;">                 美孚新村</div>                 ')[0];
+                popup_7f5680e0f1ca423cba9ec5421baac442.setContent(html_d059e1e864534ee1bd951604cc07c46f);
+            
+
+            marker_d2f5311423374cc4bedf5310c8a30ed1.bindPopup(popup_7f5680e0f1ca423cba9ec5421baac442);
+
+            
+        
+        
+            
+
+            var marker_309dce1958394953a5dc836375c3fa8e = L.marker(
+                [22.3340792,114.174706693],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_bf956c8071294f298a871960988471cb = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_309dce1958394953a5dc836375c3fa8e.setIcon(icon_bf956c8071294f298a871960988471cb);
+            
+        
+            
+            var popup_499129972b85467a8f67f6ad6ccbfa3d = L.popup({maxWidth: '300'});
+
+            
+                var html_e6c0d90bd6fd4a4a99403f73cccb5dea = $('         <div id="html_e6c0d90bd6fd4a4a99403f73cccb5dea"                 style="width: 100.0%; height: 100.0%;">                 又一居</div>                 ')[0];
+                popup_499129972b85467a8f67f6ad6ccbfa3d.setContent(html_e6c0d90bd6fd4a4a99403f73cccb5dea);
+            
+
+            marker_309dce1958394953a5dc836375c3fa8e.bindPopup(popup_499129972b85467a8f67f6ad6ccbfa3d);
+
+            
+        
+        
+            
+
+            var marker_5e26c4abd166436eab7ea9338f41974f = L.marker(
+                [60.4666225,26.9434846],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_84593438866547e6b255104ad4fe672d = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5e26c4abd166436eab7ea9338f41974f.setIcon(icon_84593438866547e6b255104ad4fe672d);
+            
+        
+            
+            var popup_81837ab3cba04dc99aa04ff00534c3f0 = L.popup({maxWidth: '300'});
+
+            
+                var html_bc9d1db6d85a4e4a8f3ac86e6f831197 = $('         <div id="html_bc9d1db6d85a4e4a8f3ac86e6f831197"                 style="width: 100.0%; height: 100.0%;">                 大興花園</div>                 ')[0];
+                popup_81837ab3cba04dc99aa04ff00534c3f0.setContent(html_bc9d1db6d85a4e4a8f3ac86e6f831197);
+            
+
+            marker_5e26c4abd166436eab7ea9338f41974f.bindPopup(popup_81837ab3cba04dc99aa04ff00534c3f0);
+
+            
+        
+        
+            
+
+            var marker_86327e60b63344afa00e111b03043fea = L.marker(
+                [22.4453215,114.035134861],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_16bc04cb35734cdab07bc74135462faf = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_86327e60b63344afa00e111b03043fea.setIcon(icon_16bc04cb35734cdab07bc74135462faf);
+            
+        
+            
+            var popup_d3c611413a7044a89198662418f476e2 = L.popup({maxWidth: '300'});
+
+            
+                var html_9fcb0f729c184ee7a3e8de2dfebfd029 = $('         <div id="html_9fcb0f729c184ee7a3e8de2dfebfd029"                 style="width: 100.0%; height: 100.0%;">                 新元朗中心</div>                 ')[0];
+                popup_d3c611413a7044a89198662418f476e2.setContent(html_9fcb0f729c184ee7a3e8de2dfebfd029);
+            
+
+            marker_86327e60b63344afa00e111b03043fea.bindPopup(popup_d3c611413a7044a89198662418f476e2);
+
+            
+        
+        
+            
+
+            var marker_36c22ad1de684c3f8e39ad9275fd6a73 = L.marker(
+                [22.4853071,114.141576566],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_af2c1e6f77904135b01861f6d59efe52 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_36c22ad1de684c3f8e39ad9275fd6a73.setIcon(icon_af2c1e6f77904135b01861f6d59efe52);
+            
+        
+            
+            var popup_2e0ab1575a874176b4f5ca5164c3ffa5 = L.popup({maxWidth: '300'});
+
+            
+                var html_1c981c188073429c8415c0fa75f498dd = $('         <div id="html_1c981c188073429c8415c0fa75f498dd"                 style="width: 100.0%; height: 100.0%;">                 花都廣場</div>                 ')[0];
+                popup_2e0ab1575a874176b4f5ca5164c3ffa5.setContent(html_1c981c188073429c8415c0fa75f498dd);
+            
+
+            marker_36c22ad1de684c3f8e39ad9275fd6a73.bindPopup(popup_2e0ab1575a874176b4f5ca5164c3ffa5);
+
+            
+        
+        
+            
+
+            var marker_2070bd4d8e87438a8941a66f71c36bac = L.marker(
+                [22.50099095,114.130005357],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_4d3762de6cc944eba5d2d1b9aa875cab = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2070bd4d8e87438a8941a66f71c36bac.setIcon(icon_4d3762de6cc944eba5d2d1b9aa875cab);
+            
+        
+            
+            var popup_ff48b546a6ee4a0994c53006240b90b3 = L.popup({maxWidth: '300'});
+
+            
+                var html_cdbc377ebc7d4c7ea9c7a74cd780d95c = $('         <div id="html_cdbc377ebc7d4c7ea9c7a74cd780d95c"                 style="width: 100.0%; height: 100.0%;">                 上水中心</div>                 ')[0];
+                popup_ff48b546a6ee4a0994c53006240b90b3.setContent(html_cdbc377ebc7d4c7ea9c7a74cd780d95c);
+            
+
+            marker_2070bd4d8e87438a8941a66f71c36bac.bindPopup(popup_ff48b546a6ee4a0994c53006240b90b3);
+
+            
+        
+        
+            
+
+            var marker_b98643a959804662b4f4c359e0ccabf9 = L.marker(
+                [35.119858,-77.0827959],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_f200a84451c54e7e91ae67d8e97bffeb = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b98643a959804662b4f4c359e0ccabf9.setIcon(icon_f200a84451c54e7e91ae67d8e97bffeb);
+            
+        
+            
+            var popup_29e758b1817c4b74a574c5318a584804 = L.popup({maxWidth: '300'});
+
+            
+                var html_37a2ff05ddfa4067b047fd53cb2969cf = $('         <div id="html_37a2ff05ddfa4067b047fd53cb2969cf"                 style="width: 100.0%; height: 100.0%;">                 嘉湖山莊</div>                 ')[0];
+                popup_29e758b1817c4b74a574c5318a584804.setContent(html_37a2ff05ddfa4067b047fd53cb2969cf);
+            
+
+            marker_b98643a959804662b4f4c359e0ccabf9.bindPopup(popup_29e758b1817c4b74a574c5318a584804);
+
+            
+        
+        
+            
+
+            var marker_303e5b6bfddc4dbd9bd57f4a6d4b9aa8 = L.marker(
+                [22.29235815,113.949002628],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_cd60a33e774a4d97bb61ef5304c75c74 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_303e5b6bfddc4dbd9bd57f4a6d4b9aa8.setIcon(icon_cd60a33e774a4d97bb61ef5304c75c74);
+            
+        
+            
+            var popup_d4d849a59f814a498999dd987b0ccc92 = L.popup({maxWidth: '300'});
+
+            
+                var html_a7576af44f844ed4b8d60a73e7182fae = $('         <div id="html_a7576af44f844ed4b8d60a73e7182fae"                 style="width: 100.0%; height: 100.0%;">                 映灣園</div>                 ')[0];
+                popup_d4d849a59f814a498999dd987b0ccc92.setContent(html_a7576af44f844ed4b8d60a73e7182fae);
+            
+
+            marker_303e5b6bfddc4dbd9bd57f4a6d4b9aa8.bindPopup(popup_d4d849a59f814a498999dd987b0ccc92);
+
+            
+        
+        
+            
+
+            var marker_39d736d0e2594d44acc2c6f06632fa32 = L.marker(
+                [22.2919209,113.945733534],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_72070dc0cded423ba852f0c025d24e9b = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_39d736d0e2594d44acc2c6f06632fa32.setIcon(icon_72070dc0cded423ba852f0c025d24e9b);
+            
+        
+            
+            var popup_ac4796c5da3441a8bba7e4d37fce2f45 = L.popup({maxWidth: '300'});
+
+            
+                var html_0db11d2f550e41d0a99edcbf6a02cef2 = $('         <div id="html_0db11d2f550e41d0a99edcbf6a02cef2"                 style="width: 100.0%; height: 100.0%;">                 藍天海岸</div>                 ')[0];
+                popup_ac4796c5da3441a8bba7e4d37fce2f45.setContent(html_0db11d2f550e41d0a99edcbf6a02cef2);
+            
+
+            marker_39d736d0e2594d44acc2c6f06632fa32.bindPopup(popup_ac4796c5da3441a8bba7e4d37fce2f45);
+
+            
+        
+        
+            
+
+            var marker_edc0b7d8053446b2a9bab6fdc81c1ef5 = L.marker(
+                [47.4829809,-111.315381878],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_b1873513a7ee4e8a854fe22909271ef7 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_edc0b7d8053446b2a9bab6fdc81c1ef5.setIcon(icon_b1873513a7ee4e8a854fe22909271ef7);
+            
+        
+            
+            var popup_3f119b14ade74e18ab507ce1b0a2dfee = L.popup({maxWidth: '300'});
+
+            
+                var html_8be6b5e7ea20472eb303f6c1e5a194a2 = $('         <div id="html_8be6b5e7ea20472eb303f6c1e5a194a2"                 style="width: 100.0%; height: 100.0%;">                 珀麗灣</div>                 ')[0];
+                popup_3f119b14ade74e18ab507ce1b0a2dfee.setContent(html_8be6b5e7ea20472eb303f6c1e5a194a2);
+            
+
+            marker_edc0b7d8053446b2a9bab6fdc81c1ef5.bindPopup(popup_3f119b14ade74e18ab507ce1b0a2dfee);
+
+            
+        
+        
+            
+
+            var marker_285f0c87ed5040e2937f71e58813b6a8 = L.marker(
+                [22.38661755,114.203511768],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_8a5d433b0dfd4920b265243917e439f9 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_285f0c87ed5040e2937f71e58813b6a8.setIcon(icon_8a5d433b0dfd4920b265243917e439f9);
+            
+        
+            
+            var popup_609a7ce6894d4bbcb9f6546d003ae7e7 = L.popup({maxWidth: '300'});
+
+            
+                var html_8c90ac5645f849c8a6b8c815f7632cd4 = $('         <div id="html_8c90ac5645f849c8a6b8c815f7632cd4"                 style="width: 100.0%; height: 100.0%;">                 沙田中心</div>                 ')[0];
+                popup_609a7ce6894d4bbcb9f6546d003ae7e7.setContent(html_8c90ac5645f849c8a6b8c815f7632cd4);
+            
+
+            marker_285f0c87ed5040e2937f71e58813b6a8.bindPopup(popup_609a7ce6894d4bbcb9f6546d003ae7e7);
+
+            
+        
+        
+            
+
+            var marker_28d9f3a1b6f24969a97ad0a40109bdcc = L.marker(
+                [22.38661755,114.203511768],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_cc81e924de084d73825797f9780ce02b = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_28d9f3a1b6f24969a97ad0a40109bdcc.setIcon(icon_cc81e924de084d73825797f9780ce02b);
+            
+        
+            
+            var popup_a306680a4617449d9f9fb32176540df2 = L.popup({maxWidth: '300'});
+
+            
+                var html_5097f8f18c45416e9a7059a29946e3c6 = $('         <div id="html_5097f8f18c45416e9a7059a29946e3c6"                 style="width: 100.0%; height: 100.0%;">                 沙田第一城</div>                 ')[0];
+                popup_a306680a4617449d9f9fb32176540df2.setContent(html_5097f8f18c45416e9a7059a29946e3c6);
+            
+
+            marker_28d9f3a1b6f24969a97ad0a40109bdcc.bindPopup(popup_a306680a4617449d9f9fb32176540df2);
+
+            
+        
+        
+            
+
+            var marker_7e87f8ee57b54fcc8c389df60fecc3e5 = L.marker(
+                [35.72868745,139.719627681],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_cab90a39f9414d9382fa3ea59a2f17ec = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7e87f8ee57b54fcc8c389df60fecc3e5.setIcon(icon_cab90a39f9414d9382fa3ea59a2f17ec);
+            
+        
+            
+            var popup_9611e01ff2174c10a2e01380e52a8d85 = L.popup({maxWidth: '300'});
+
+            
+                var html_d4d47bef110f4d6b9caab414c6a87205 = $('         <div id="html_d4d47bef110f4d6b9caab414c6a87205"                 style="width: 100.0%; height: 100.0%;">                 新港城</div>                 ')[0];
+                popup_9611e01ff2174c10a2e01380e52a8d85.setContent(html_d4d47bef110f4d6b9caab414c6a87205);
+            
+
+            marker_7e87f8ee57b54fcc8c389df60fecc3e5.bindPopup(popup_9611e01ff2174c10a2e01380e52a8d85);
+
+            
+        
+        
+            
+
+            var marker_0f06e8c4c9544a78beadf8d7d4310a07 = L.marker(
+                [25.0316577,-77.3974638487],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_8ee1841c6cf941d08e01f92dd5cb97f1 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0f06e8c4c9544a78beadf8d7d4310a07.setIcon(icon_8ee1841c6cf941d08e01f92dd5cb97f1);
+            
+        
+            
+            var popup_62738cba353f4ef49ab42266733fdddc = L.popup({maxWidth: '300'});
+
+            
+                var html_2394a8ec48ad486b985126306eaf9ea9 = $('         <div id="html_2394a8ec48ad486b985126306eaf9ea9"                 style="width: 100.0%; height: 100.0%;">                 銀禧花園</div>                 ')[0];
+                popup_62738cba353f4ef49ab42266733fdddc.setContent(html_2394a8ec48ad486b985126306eaf9ea9);
+            
+
+            marker_0f06e8c4c9544a78beadf8d7d4310a07.bindPopup(popup_62738cba353f4ef49ab42266733fdddc);
+
+            
+        
+        
+            
+
+            var marker_743031ff7049499f87f000d113cd6f6e = L.marker(
+                [22.42584475,114.23306646],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_27782077d81f47088977e5b243b5fb8c = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_743031ff7049499f87f000d113cd6f6e.setIcon(icon_27782077d81f47088977e5b243b5fb8c);
+            
+        
+            
+            var popup_4b510e6b9aaa49d28e980487b6a18777 = L.popup({maxWidth: '300'});
+
+            
+                var html_7046a6ceec9f430fab936490e2a46286 = $('         <div id="html_7046a6ceec9f430fab936490e2a46286"                 style="width: 100.0%; height: 100.0%;">                 馬鞍山中心</div>                 ')[0];
+                popup_4b510e6b9aaa49d28e980487b6a18777.setContent(html_7046a6ceec9f430fab936490e2a46286);
+            
+
+            marker_743031ff7049499f87f000d113cd6f6e.bindPopup(popup_4b510e6b9aaa49d28e980487b6a18777);
+
+            
+        
+        
+            
+
+            var marker_b64ec5193df14c03971e508153983ef0 = L.marker(
+                [22.42652545,114.237831163],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_91f5e9e179c3403c9a6895b2e28c733f = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b64ec5193df14c03971e508153983ef0.setIcon(icon_91f5e9e179c3403c9a6895b2e28c733f);
+            
+        
+            
+            var popup_87f0b6b7f71e411483d782c2c848fd50 = L.popup({maxWidth: '300'});
+
+            
+                var html_1ca756ed2fb44d63bb5c14416f418357 = $('         <div id="html_1ca756ed2fb44d63bb5c14416f418357"                 style="width: 100.0%; height: 100.0%;">                 雅典居</div>                 ')[0];
+                popup_87f0b6b7f71e411483d782c2c848fd50.setContent(html_1ca756ed2fb44d63bb5c14416f418357);
+            
+
+            marker_b64ec5193df14c03971e508153983ef0.bindPopup(popup_87f0b6b7f71e411483d782c2c848fd50);
+
+            
+        
+        
+            
+
+            var marker_ef8a20dd7eab4371b22f66a3fe957166 = L.marker(
+                [46.973703,-124.1562769],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_7ed3165438ac450fb9a0c6731638831e = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ef8a20dd7eab4371b22f66a3fe957166.setIcon(icon_7ed3165438ac450fb9a0c6731638831e);
+            
+        
+            
+            var popup_7d0cc831590741e593b45f519ac563b3 = L.popup({maxWidth: '300'});
+
+            
+                var html_7588e8056ba24bd0bbd22683a4c93bc4 = $('         <div id="html_7588e8056ba24bd0bbd22683a4c93bc4"                 style="width: 100.0%; height: 100.0%;">                 維景灣畔</div>                 ')[0];
+                popup_7d0cc831590741e593b45f519ac563b3.setContent(html_7588e8056ba24bd0bbd22683a4c93bc4);
+            
+
+            marker_ef8a20dd7eab4371b22f66a3fe957166.bindPopup(popup_7d0cc831590741e593b45f519ac563b3);
+
+            
+        
+        
+            
+
+            var marker_b98a1ee1f28340d29acafc826c18b779 = L.marker(
+                [26.8652314,80.9605985909],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_45461117d2dc46f683f96952e92a425f = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b98a1ee1f28340d29acafc826c18b779.setIcon(icon_45461117d2dc46f683f96952e92a425f);
+            
+        
+            
+            var popup_17c850ab3b814a65b6616d0be385ab63 = L.popup({maxWidth: '300'});
+
+            
+                var html_cb44ae4b7e9244f383cfdcdfd925a2d3 = $('         <div id="html_cb44ae4b7e9244f383cfdcdfd925a2d3"                 style="width: 100.0%; height: 100.0%;">                 新都城</div>                 ')[0];
+                popup_17c850ab3b814a65b6616d0be385ab63.setContent(html_cb44ae4b7e9244f383cfdcdfd925a2d3);
+            
+
+            marker_b98a1ee1f28340d29acafc826c18b779.bindPopup(popup_17c850ab3b814a65b6616d0be385ab63);
+
+            
+        
+        
+            
+
+            var marker_8f48dd1f609849039905f86cd4f54405 = L.marker(
+                [22.30710635,114.25719187],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_62fbcf8b478c44bc8be7218026251054);
+            
+        
+            
+
+                var icon_0ee4d8acf9dd4679a1b95b35dc0c5bd1 = L.AwesomeMarkers.icon({
+                    icon: 'ok-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8f48dd1f609849039905f86cd4f54405.setIcon(icon_0ee4d8acf9dd4679a1b95b35dc0c5bd1);
+            
+        
+            
+            var popup_6be457e12f204da7b13578720554d7e8 = L.popup({maxWidth: '300'});
+
+            
+                var html_43d4694e888e4d92b24876017b278cdc = $('         <div id="html_43d4694e888e4d92b24876017b278cdc"                 style="width: 100.0%; height: 100.0%;">                 將軍澳中心</div>                 ')[0];
+                popup_6be457e12f204da7b13578720554d7e8.setContent(html_43d4694e888e4d92b24876017b278cdc);
+            
+
+            marker_8f48dd1f609849039905f86cd4f54405.bindPopup(popup_6be457e12f204da7b13578720554d7e8);
+
+            
+        
+        
+        
+        </script>
+        
