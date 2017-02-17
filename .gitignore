@@ -45,3 +45,11 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Custom
+.idea
+.vs
+*.pyproj
+*.sln
+.gitattributes
+.gitignore
